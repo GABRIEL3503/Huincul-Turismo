@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Huincul Turismo</title>
+</head>
+
+<body>
+
+
+
+    <div class="navbar" id="myNavbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon close-icon" onclick="myFunction()">&#9776;</a>
+    </div>
+ 
+<main>
+    <section id="card-swiper">
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img
+                        src="https://http2.mlstatic.com/D_NQ_823592-MLA54835747063_042023-OO.webp" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://http2.mlstatic.com/D_NQ_650942-MLA54777470889_032023-OO.webp" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://http2.mlstatic.com/D_NQ_815467-MLA54844846731_042023-OO.webp" alt=""></div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    </section>
+
+    <section id="card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/329234663_235653192162261_3679576018422549631_n.jpg" alt="Avatar">
+                    <button class="button-card">MAS INFO</button>
+                </div>
+                <div class="flip-card-back">
+                    <h1>SALTA la linda</h1>
+                    <p>6 Noches 7 dias</p>
+                    <p>Hotel, transporte y exursiones incluidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+</main>
+</body>
+
+</html>
