@@ -1,4 +1,8 @@
+:root {
+  --color-principal: #2B8CBE;
 
+  --color-claro: #f7f7f7;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -8,19 +12,22 @@ margin-top: 48px;
 }
 
 .navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   overflow: hidden;
-  background-color: #333;  
+  background-color: var(--color-claro);  
   transition: max-height 0.5s ease-out;
   width: 100%;
   z-index: 90;
 }
 
-.navbar a {
+ a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -49,7 +56,7 @@ flex-direction: column
 ;}
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
+  .navegacion a {display: none;}
   .navbar a.icon {
     float: right;
     display: block;
@@ -79,13 +86,13 @@ flex-direction: column
     max-width: 1600px;
   
   }
-  img{
+  .flip-card-front img{
     height: 225px;
     width: 100%;
     object-fit: cover;
   }
   @media (main-width:1024){
-    img{
+    .flip-card-front img{
         height: 344px;
         width: 100%;
         object-fit: cover;
@@ -153,4 +160,16 @@ flex-wrap: wrap;
 width: 220px;
 height: 100%;
     width: 100%;
+  }
+
+  .logo{
+    width: 100%;
+    max-height: 12vh;
+  }
+  .navegacion{
+    display: flex;
+;
+  }
+  .navbar{
+    display: flex;
   }
