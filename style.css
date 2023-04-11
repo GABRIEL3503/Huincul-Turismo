@@ -49,7 +49,7 @@ margin-top: 10vh;
   display: none;
 }
 .responsive{
- 
+ height: auto;
 border-radius: 22px;
 display: flex;
 align-items: center;
