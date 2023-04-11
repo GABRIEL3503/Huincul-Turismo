@@ -63,9 +63,9 @@ flex-direction: column
     display: block;
   }
 
-  .navbar {
+  responsive.navbar {
     height: auto;
-}
+}}
 
 @media screen and (max-width: 600px) {
   .navbar.responsive .icon {
