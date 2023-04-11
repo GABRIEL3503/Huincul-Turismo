@@ -10,6 +10,10 @@ body {
 main{
 margin-top: 10vh;
 }
+.icon{
+  color: var(--color-principal);
+  font-size: 22px;
+}
 
 .navbar {
   height: 10vh;
@@ -36,11 +40,15 @@ margin-top: 10vh;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  
+  border-radius: 12px;
+  background-color:var(--color-secundario);
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar a.active {
+  
   background-color: #04AA6D;
   color: white;
 }
@@ -59,11 +67,12 @@ flex-direction: column
 @media screen and (max-width: 600px) {
   .navegacion a {display: none;}
   .navbar a.icon {
+    color: var(--color-principal);
     float: right;
     display: block;
   }
 
-  responsive.navbar {
+  .responsive.navbar {
     height: auto;
 }}
 
@@ -231,7 +240,7 @@ height: 100%;
   /* preguntas frecuentes */
   .preguntas-frec {
     padding-top: 4rem;
-    width: 70%;
+    width: 75%;
     margin: auto;
   }
   .preguntas-frec h1 {
