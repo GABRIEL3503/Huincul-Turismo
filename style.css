@@ -220,7 +220,7 @@ flex-direction: column
     color: white;
     transform: rotateY(180deg);
   }
-
+  
   #card{
     border-radius: 12px;
 display: flex;
@@ -253,7 +253,9 @@ height: 100%;
 
   /* preguntas frecuentes */
   .preguntas-frec {
-    padding-top: 4rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+ 
     width: 75%;
     margin: auto;
   }
@@ -278,6 +280,7 @@ height: 100%;
   }
   
   details summary {
+    text-shadow: 1px 2px 3px grey;
     color: white;
     width: 100%;
     padding: 0.5rem 0;
@@ -290,6 +293,7 @@ height: 100%;
   }
   
   details summary:after {
+   
     content: "+";
     color: rgb(255, 255, 255);
     position: absolute;
@@ -309,6 +313,7 @@ height: 100%;
     outline: 0;
   }
   details p {
+    text-shadow: 1px 2px 3px grey;
     color: white;
     font-size: 1.22rem;
     margin: 0 0 1rem;
@@ -325,6 +330,7 @@ margin-bottom: 52px;
     background-color: rgba(255, 255, 255, 0.863);
   }
   button{
+    border-width: 3px;
     cursor: pointer;
     color: var(--color-principal);
     border-color:  var(--color-principal);
@@ -340,9 +346,11 @@ margin-bottom: 52px;
 
 
   #preguntas-frec{
-    height: 59vh;
+    margin-bottom: 17px;
+    height: 100%;
     background: rgb(8,196,185);
     background: linear-gradient(90deg, rgba(8,196,185,0.9472163865546218) 16%, rgba(1,158,205,0.9416141456582633) 49%, rgba(0,156,112,0.8295693277310925) 100%);}
   .preguntas-frec h1{
+    text-shadow: 1px 2px 3px grey;
 color: rgb(236, 236, 236);
   }
