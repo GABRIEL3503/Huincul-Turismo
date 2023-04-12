@@ -10,20 +10,23 @@ function myFunction() {
       document.querySelector('.close-icon').innerHTML = '&#9776;';
     }
   }
-
   const flipCards = document.querySelectorAll('.flip-card');
 
   flipCards.forEach((flipCard) => {
     const flipCardBack = flipCard.querySelector('.flip-card-back');
+    const flipCardInner = flipCard.querySelector('.flip-card-inner');
   
     flipCardBack.addEventListener('click', function() {
-      const flipCardInner = flipCardBack.parentNode;
+      flipCardInner.style.transform = 'rotateY(0deg)';
+    });
+  
+    flipCardBack.addEventListener('mouseleave', function() {
       flipCardInner.style.transform = 'rotateY(0deg)';
     });
   
     const btnMasInfo = flipCard.querySelector('.button-card');
     btnMasInfo.addEventListener('click', function() {
-      const cardInner = flipCard.querySelector('.flip-card-inner');
-      cardInner.style.transform = 'rotateY(180deg)';
+      flipCardInner.style.transform = 'rotateY(180deg)';
     });
   });
+  

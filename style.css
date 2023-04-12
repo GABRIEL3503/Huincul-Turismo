@@ -114,7 +114,7 @@ flex-direction: column
 
   width: 100%;
   height: 77vh;
-  background: url("./img/hero.jpg") top center;
+  background: url("./img/hero.webp") top center;
   background-size: cover;
   position: relative;
   padding: 0;
