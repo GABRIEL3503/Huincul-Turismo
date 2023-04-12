@@ -30,9 +30,10 @@ margin-top: 10vh;
 }
 
  a {
+  font-weight: 600;
   float: left;
   display: block;
-  color: #000000;
+  color: rgb(49, 49, 49);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -112,17 +113,28 @@ flex-direction: column
 
   width: 100%;
   height: 77vh;
-  background: url("./img/arg.jpg") top center;
+  background: url("./img/hero.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
   background-attachment: fixed;
 }
 
+.img1::before {
+  content: ""; /* Agrega un pseudo-elemento antes del contenido del contenedor */
+  position: absolute; /* Permite que el pseudo-elemento se posicione de manera absoluta en relación al contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Color de la capa */
+  opacity: 0.5; /* Opacidad de la capa */
+}
+
 .portada-text {
   
-  background-color: rgba(0, 0, 0, 0.116);
-  
+  background-color: rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
   color: white;
   font-weight: bold;
   font-size: 30px;
@@ -202,7 +214,8 @@ flex-direction: column
   
   .flip-card-back {
     border-radius: 12px;
-    background-color: #2980b9;
+    background: rgb(8,196,185);
+    background: linear-gradient(90deg, rgba(8,196,185,0.8547794117647058) 50%, rgba(1,158,205,0.9416141456582633) 90%, rgba(0,156,112,0.8295693277310925) 100%);
     color: white;
     transform: rotateY(180deg);
   }
@@ -222,7 +235,7 @@ height: 100%;
 
   .logo{
     width: 100%;
-    max-height: 9vh;
+    max-height: 7vh;
   }
   .navegacion{
     display: flex;
@@ -264,19 +277,20 @@ height: 100%;
   }
   
   details summary {
+    color: white;
     width: 100%;
     padding: 0.5rem 0;
-    border-top: 2px solid var(--color-principal);
+    border-top: 2px solid #9cffff;
     position: relative;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     font-weight: 300;
     list-style: none;
   }
   
   details summary:after {
     content: "+";
-    color: black;
+    color: rgb(255, 255, 255);
     position: absolute;
     font-size: 1.75rem;
     line-height: 0;
@@ -294,8 +308,8 @@ height: 100%;
     outline: 0;
   }
   details p {
-    
-    font-size: 0.95rem;
+    color: white;
+    font-size: 1.22rem;
     margin: 0 0 1rem;
     padding-top: 1rem;
   }
@@ -314,11 +328,20 @@ margin-bottom: 52px;
     color: var(--color-principal);
     border-color:  var(--color-principal);
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgb(255, 255, 255);
     font-family: 'Lexend Deca', sans-serif;
     padding: 10px;
     border-radius: 9px;
   }
   .ht{
     color: var(--color-principal);
+  }
+
+
+  #preguntas-frec{
+    height: 59vh;
+    background: rgb(8,196,185);
+    background: linear-gradient(90deg, rgba(8,196,185,0.9472163865546218) 16%, rgba(1,158,205,0.9416141456582633) 49%, rgba(0,156,112,0.8295693277310925) 100%);}
+  .preguntas-frec h1{
+color: rgb(236, 236, 236);
   }
