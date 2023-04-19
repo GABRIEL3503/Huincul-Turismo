@@ -13,49 +13,22 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function myFunction() {
-    var x = document.getElementById("myNavbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-      document.querySelector('.close-icon').innerHTML = 'X';
-    } else {
-      x.className = "navbar";
-      document.querySelector('.close-icon').innerHTML = '&#9776;';
-    }
-  }
-  const flipCards = document.querySelectorAll('.flip-card');
+const flipCards = document.querySelectorAll('.flip-card');
 
-  flipCards.forEach((flipCard) => {
-    const flipCardBack = flipCard.querySelector('.flip-card-back');
-    const flipCardInner = flipCard.querySelector('.flip-card-inner');
-  
-    flipCardBack.addEventListener('click', function() {
-      flipCardInner.style.transform = 'rotateY(0deg)';
-    });
-  
-    flipCardBack.addEventListener('mouseleave', function() {
-      flipCardInner.style.transform = 'rotateY(0deg)';
-    });
-  
-    const btnMasInfo = flipCard.querySelector('.button-card');
-    btnMasInfo.addEventListener('click', function() {
-      flipCardInner.style.transform = 'rotateY(180deg)';
-    });
+flipCards.forEach((flipCard) => {
+  const flipCardBack = flipCard.querySelector('.flip-card-back');
+  const flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+  flipCardBack.addEventListener('click', function() {
+    flipCardInner.style.transform = 'rotateY(0deg)';
   });
-  const summaryElement = document.getElementById('summary-element');
 
-summaryElement.addEventListener('click', function() {
-  // Obtener el elemento de detalles
-  const detailsElement = this.parentNode;
-  
-  // Obtener el estado actual de los detalles (abierto o cerrado)
-  const isOpen = detailsElement.hasAttribute('open');
-  
-  if (isOpen) {
-    // Si los detalles están abiertos, retrasar el cierre por 500ms (medio segundo)
-    setTimeout(function() {
-      detailsElement.removeAttribute('open');
-    }, 500);
-  }
+  flipCardBack.addEventListener('mouseleave', function() {
+    flipCardInner.style.transform = 'rotateY(0deg)';
+  });
+
+  const btnMasInfo = flipCard.querySelector('.button-card');
+  btnMasInfo.addEventListener('click', function() {
+    flipCardInner.style.transform = 'rotateY(180deg)';
+  });
 });
-
