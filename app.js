@@ -27,7 +27,7 @@ flipCards.forEach((flipCard) => {
     flipCardInner.style.transform = 'rotateY(0deg)';
   });
 
-  const btnMasInfo = flipCard.querySelector('.button-card');
+  const btnMasInfo = flipCard.querySelector('.butcard');
   btnMasInfo.addEventListener('click', function() {
     flipCardInner.style.transform = 'rotateY(180deg)';
   });
