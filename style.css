@@ -445,7 +445,7 @@ p{
   background: url("img/rsz_hero.jpg") center center;
   background-size: cover;
   position: relative;
-  margin-top: 0px;
+  margin-top: -6px;
   padding: 0;
 }
 
