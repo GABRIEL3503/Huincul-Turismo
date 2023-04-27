@@ -508,7 +508,7 @@ p{
 
 @media (max-width: 992px) {
   #hero {
-    margin-top: 0px;
+    margin-top: -6px;
     height: calc(85vh  - 94px);
   }
 }
@@ -646,4 +646,8 @@ background: linear-gradient(90deg, rgba(8, 196, 185, 0.9472163865546218) 16%, rg
   padding: 3px;
   color: white;
   float: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
