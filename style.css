@@ -570,9 +570,80 @@ h3{
   font-family: 'Poppins', sans-serif;
 }
 
- h2 {
+.preguntas-frec h2 {
   margin-left: 0px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: rgb(255, 255, 255);
+}
+.social-links{
+  margin-bottom: 13px;
+    max-width: 320px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding: 0.875rem 72px 0.875rem 1.75rem;
+    background-color: #039be5;
+    background-image: linear-gradient(to top right, #039be5,#29b6f6);
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    transition: all .6s  ease;
+  }
+  
+  .social-links span {
+    background-color:rgb(41 172 140);
+    display: grid;
+    position: absolute;
+    right: 0;
+    place-items: center;
+    width: 3rem;
+    height: 100%;
+  }
+  
+  .social-links span svg {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+  
+  .social-links:hover {
+    box-shadow: 0 4px 30px  rgba(4, 175, 255, .1), 0 2px 30px rgba(11, 158, 255, 0.06);
+  }
+.contacto{
+  align-items: center;
+  height: auto;
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contenedor-social-links{
+  align-items: center;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer{
+  height: 30vh;
+}
+
+.designby{
+
+ 
+height: auto;
+background: linear-gradient(90deg, rgba(8, 196, 185, 0.9472163865546218) 16%, rgba(1, 158, 205, 0.9416141456582633) 49%, rgba(0, 156, 112, 0.8295693277310925) 100%);
+}
+.designby a{
+  padding: 3px;
+  color: white;
+  float: none;
 }
