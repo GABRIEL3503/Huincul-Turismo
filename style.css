@@ -560,7 +560,7 @@ h2{
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   color:rgb(49, 49, 49);
-  margin-left: 10vw;
+ text-align: center;
 }
 h3{
   font-family: 'Lato', sans-serif;
@@ -571,6 +571,7 @@ h3{
 }
 
 .preguntas-frec h2 {
+  margin-bottom: 69px;
   margin-left: 0px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -654,4 +655,28 @@ html {
 }
 .contacto{
   margin-bottom: 41px;
+}
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* Cambiar el ancho según lo necesites */
+  height: 2px;
+  background-color: var(--color-principal);
+}
+.preguntas-frec h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 370px; /* Cambiar el ancho según lo necesites */
+  height: 2px;
+  background-color: #9cffff;
 }
