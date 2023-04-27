@@ -1,4 +1,3 @@
-AOS.init();
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -42,3 +41,4 @@ function myFunction() {
     x.className = "navbar";
   }
 }
+AOS.init();

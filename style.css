@@ -652,3 +652,6 @@ background: linear-gradient(90deg, rgba(8, 196, 185, 0.9472163865546218) 16%, rg
 html {
   scroll-behavior: smooth;
 }
+.contacto{
+  margin-bottom: 41px;
+}
