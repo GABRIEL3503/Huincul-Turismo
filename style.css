@@ -97,7 +97,7 @@ a {
   font-size: 17px;
 }
 
-.navbar a:hover {
+.navbar a:not(:first-child):hover  {
 
   border-radius: 12px;
   background-color: var(--color-secundario);
