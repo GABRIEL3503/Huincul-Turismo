@@ -42,3 +42,4 @@ function myFunction() {
     x.className = "navbar";
   }
 }
+AOS.init();
