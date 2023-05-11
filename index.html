@@ -20,18 +20,22 @@
 <body>
 
 
-    <header>
-        <div class="navbar" id="myNavbar">
-          <a href="#hero"><img class="logo" src="img/logo.png" alt=""></a>
-          <div class="navegacion">
-            <a href="#hero" onclick="myFunction()">Home</a>
-            <a href="#destinos" onclick="myFunction()">Destinos</a>
-            <a href="#preg--frecuentes" onclick="myFunction()">Preguntas frecuentes</a>
-            <a href="#about" onclick="myFunction()">Contacto</a>
-            <a href="javascript:void(0);" class="icon close-icon" onclick="myFunction()">&#9776;</a>
-          </div>
-        </div>
-      </header>
+  <header>
+    <div class="navbar" id="myNavbar">
+      <a href="#hero" class="logo-cont"><img class="logo" src="img/logo.png" alt=""></a>
+      <div class="navegacion">
+        <a href="#hero" onclick="closeNavbar()">Inicio</a>
+        <a href="#card" onclick="closeNavbar()">Destinos</a>
+        <a href="#card" onclick="closeNavbar()">Quiénes somos</a>
+        <a href="#preg--frecuentes" onclick="closeNavbar()">Preguntas frecuentes</a>
+        <a href="#contacto" onclick="closeNavbar()">Contacto</a>
+        <a href="javascript:void(0);" class="icon close-icon" onclick="myFunction()">
+          <span id="menuIcon">&#9776;</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
 <main>
     <!-- =======  Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center navegacion">
@@ -42,7 +46,7 @@
         
     
       <!-- <h2 class="aventura">Y estamos preparados vivirla con vos</h2> -->
-      <a href="#team" class="btn-get-started scrollto">DESTINOS</a>
+      <a href="#card" class="btn-get-started scrollto">DESTINOS</a>
     </div>
   </section>
   <!-- End Hero -->
@@ -105,6 +109,14 @@
             </div>
         </div>
     </section>
+
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+<div class="box-info">
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime omnis consequatur. Explicabo deleniti voluptates laboriosam rerum asperiores inventore a eaque facere animi ex. Quibusdam repudiandae fugit commodi expedita reprehenderit.</h3>
+</div>
+
+    </section>
    
       <section id="preg--frecuentes">
         <div class="preguntas-frec">
@@ -132,7 +144,7 @@
     </div>
     </section>
 
-   <footer>
+   <footer id="contacto">
     <h2>Contacto</h2>
     <section class="contacto">
         <div class="contenedor-social-links">

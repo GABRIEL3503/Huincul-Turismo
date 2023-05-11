@@ -66,21 +66,27 @@ main {
   margin-top: 10vh;
 }
 
-.icon {
-  color: var(--color-principal);
+.close-icon {
   font-size: 22px;
+  color: white;
 }
 
+.menu-icon {
+  font-size: 22px;
+  color: white
+}
+
+
 .navbar {
-  height: 9vh;
+  height: 10vh;
   align-items: center;
   display: flex;
   justify-content: space-between;
   position: fixed;
   top: 0;
   overflow: hidden;
-  background-color: var(--color-claro);
-  transition: max-height 0.5s ease-out;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
   width: 100%;
   z-index: 90;
 }
@@ -94,7 +100,7 @@ a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .navbar a:not(:first-child):hover  {
@@ -129,7 +135,7 @@ a {
   }
 
   .navbar a.icon {
-    color: var(--color-principal);
+    color: white;
     float: right;
     display: block;
   }
@@ -154,7 +160,8 @@ a {
 
 }
 
-.navbar a.close-icon {
+.navbar a.close- {
+  color: white;
   content: "X";
 }
 
@@ -301,6 +308,7 @@ a {
 }
 
 .flip-card-front img {
+
   border-radius: 12px;
   width: 220px;
   height: 100%;
@@ -308,11 +316,13 @@ a {
 }
 
 .logo {
+  margin-top: 5px;
   width: 100%;
-  max-height: 7vh;
+  max-height: 9.2vh;
 }
 
 .navegacion {
+  margin-right: 25px;
       justify-content: space-around;
   display: flex;
   
@@ -445,7 +455,7 @@ p{
   background: url("img/rsz_hero.jpg") center center;
   background-size: cover;
   position: relative;
-  margin-top: -6px;
+  margin-top: -67px;
   padding: 0;
 }
 
@@ -508,7 +518,7 @@ p{
 
 @media (max-width: 992px) {
   #hero {
-    margin-top: -6px;
+  
     height: calc(85vh  - 94px);
   }
 }
@@ -680,3 +690,40 @@ h2::after {
   height: 2px;
   background-color: #9cffff;
 }
+.box-info{
+  color: #444444;
+    background: var(--color-claro);
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 20px 0 30px 0;
+}
+.logo-cont{
+  margin-left: 25px;
+}
+@media (max-width: 767px) {
+
+  .navegacion {
+    margin-right: 1px;}
+  .logo-cont{
+    margin-left: -10px;
+  }
+}
+
+
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .navbar a {
+    color: white;
+  }
+}
+@media (max-width: 768px) {
+  .navbar a {
+    color: var(---color--links);
+  }
+}
+
