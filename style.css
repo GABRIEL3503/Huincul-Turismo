@@ -727,3 +727,6 @@ h2::after {
   }
 }
 
+.navbar a:hover {
+  color: white !important;
+}
