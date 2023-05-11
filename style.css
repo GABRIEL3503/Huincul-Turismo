@@ -103,18 +103,17 @@ a {
   font-size: 15px;
 }
 
-.navbar a:not(:first-child):hover  {
-
+.nav-link:hover, .nav-link.active {
+  color: white;
   border-radius: 12px;
   background-color: var(--color-secundario);
-  color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
 }
 
 .navbar a.active {
 
-  background-color: #04AA6D;
-  color: white;
+  background-color: var();
+  color: white !important;
 }
 
 .navbar .icon {
@@ -455,7 +454,7 @@ p{
   background: url("img/rsz_hero.jpg") center center;
   background-size: cover;
   position: relative;
-  margin-top: -67px;
+  margin-top: -75px;
   padding: 0;
 }
 
@@ -727,6 +726,6 @@ h2::after {
   }
 }
 
-.navbar a:hover {
+.navbar a:not(:first-child):hover {
   color: white !important;
 }
