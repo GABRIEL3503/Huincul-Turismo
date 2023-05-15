@@ -757,3 +757,16 @@ h2::after {
 .titulo{
   background-color: var(--color-claro);
 }
+
+.formas-de-pago{
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;}
+
+  .formas-de-pago img ,
+  .formas-de-pago svg{
+    margin-bottom: -22px;
+  }
