@@ -55,6 +55,8 @@
   --color-principal: #2B8CBE;
   --color-secundario: #4EB3D3;
   --color-claro: #f7f7f7;
+  --color-h3: #2C3B4E;
+  --color-blanco: #fff;
 }
 
 body {
@@ -581,8 +583,8 @@ h3 {
   text-align: center;
   font-weight: 100;
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  color: #2C3B4E;
+  font-size: 17px;
+  color: var(--color-h3) ;
  
   font-family: 'Poppins', sans-serif;
 }
@@ -710,10 +712,8 @@ h2::after {
 
 .box-info {
   color: #444444;
-  background: var(--color-claro);
+  background: var(--color-blanco);
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-  padding: 20px 0 30px 0;
 }
 
 .logo-cont {
@@ -752,4 +752,8 @@ h2::after {
 
 .navbar a:not(:first-child):hover {
   color: white !important;
+}
+
+.titulo{
+  background-color: var(--color-claro);
 }
