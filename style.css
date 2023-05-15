@@ -773,3 +773,13 @@ h2::after {
     margin-top: 22px;
   }
   
+  
+
+@media (max-width: 767px) {
+  .flip-card{
+    height: 72vh;
+    width: 95vw;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
