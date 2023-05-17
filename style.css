@@ -805,3 +805,13 @@ p{
 .contacto img{
   width: 33px;
 }
+
+ #forma-de-pago{
+  background: url(img/patrones/white_wall_hash.webp);
+  margin-top: -27px;
+  padding-bottom: 35px;
+}
+
+#forma-de-pago h2{
+  padding-top: 54px;
+}
