@@ -246,11 +246,12 @@ a {
 }
 
 .flip-card {
+  width: 275px;
+  height: 342px;
   border-radius: 12px;
   margin: 30px;
   background-color: transparent;
-  width: 320px;
-  height: 387px;
+
   perspective: 1000px;
 }
 
@@ -500,7 +501,7 @@ p {
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 28px;
+  padding: 8px 19px;
   border-radius: 4px;
   transition: 0.5s;
   border: 2px solid #fff;
@@ -782,4 +783,25 @@ h2::after {
     margin-left: 2px;
     margin-right: 2px;
   }
+}
+.my-swal-text {
+  font-size: 10px;
+ 
+}
+
+.my-swal-background {
+  background-color: #b7fdfddc; /* Reemplaza #ff0000 con el color deseado */
+}
+
+
+
+#forma-de-pago svg, img{
+ cursor: pointer; 
+}
+
+p{
+  color: var(--color-h3);
+}
+.contacto img{
+  width: 33px;
 }

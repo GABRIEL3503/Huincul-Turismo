@@ -90,3 +90,84 @@ window.addEventListener('scroll', function() {
     }
   }
 });
+
+const elements = document.querySelectorAll(".btn-alert-opcion");
+
+elements.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'Paga en efectivo y asegura tu próximo viaje,                       también podes combinar con otros medio de pago!',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
+
+
+const elementsUno = document.querySelectorAll(".btn-alert-opcion1");
+
+elementsUno.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'Realiza tu pago de forma segura y confiable a trtavez de transferencias bancarias. Además, tienes la opción de combinarlo con otros medios de pago para mayor comodidad.',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
+
+const elementsDos = document.querySelectorAll(".btn-alert-opcion2");
+
+elementsDos.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'Flexibilidad en tus manos. Aceptamos tarjetas de crédito para que puedas reservar fácilmente tus aventuras.',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
+
+const elementsTres = document.querySelectorAll(".btn-alert-opcion3");
+
+elementsTres.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'En colaboración con Crédito Argentino, podemos ofrecer opciones de financiamiento más amplias para aquellos que necesiten una mayor flexibilidad en el pago',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
+
+const elementsCuatro = document.querySelectorAll(".btn-alert-opcion4");
+
+elementsCuatro.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'Utiliza Mercado Pago para abonar tus reservas de forma segura y práctica.',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
