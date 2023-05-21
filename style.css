@@ -280,11 +280,12 @@ a {
   backface-visibility: hidden;
 }
 .flip-card-back h1 {
+  padding: 22px;
   font-size: 20px;
   color: var(--color-h3);
 }
 .flip-card-back p{
-  padding: 0px 12px;
+  padding: 0px 20px;
 }
 .flip-card-front {
   border-radius: 12px;
