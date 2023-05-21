@@ -280,7 +280,7 @@ a {
   backface-visibility: hidden;
 }
 .flip-card-back h1 {
-  padding: 22px;
+  padding-top: 3px;
   font-size: 23px;
   color: var(--color-claro);
 }
@@ -824,4 +824,9 @@ p{
 }
 .contenedor-social-links a{
   padding: 0;
+}
+
+.icon-tarj{
+width: 33px ;
+height: 33px;
 }
