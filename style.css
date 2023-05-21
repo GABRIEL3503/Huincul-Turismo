@@ -280,7 +280,7 @@ a {
   backface-visibility: hidden;
 }
 .flip-card-back h1 {
-  margin-bottom: -7px;
+  margin-bottom: -4px;
   padding-top: 3px;
   font-size: 23px;
   color: var(--color-claro);
