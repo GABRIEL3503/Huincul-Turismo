@@ -286,7 +286,7 @@ a {
   color: var(--color-claro);
 }
 .flip-card-back p{
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 .flip-card-front {
   border-radius: 12px;
@@ -828,14 +828,37 @@ p{
   padding: 0;
 }
 
-/* .icon-tarj{
-width: 33px ;
-height: 33px;
-} */
+
 .icon-tarj{
   width: 18px ;
   height: 18px;
   }
 .texto p{
   font-size: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .icon-tarj{
+width: 29px ;
+height: 29px;
+} 
+.texto p{
+  font-size: 13px;
+}
+}
+
+.flip-card-back .social-links {
+  margin-bottom: -3px;
+  max-width: 320px;
+  padding: 7px 59px;
+  font-size: 12px;
+  line-height: 1.25rem;
+  font-weight: 400;
+  padding-left: 31px;
+}
+.contenedor-social-links {
+  align-items: center;}
+
+.flip-card-back img{
+width: 30px;
 }
