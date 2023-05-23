@@ -828,7 +828,14 @@ p{
   padding: 0;
 }
 
-.icon-tarj{
+/* .icon-tarj{
 width: 33px ;
 height: 33px;
+} */
+.icon-tarj{
+  width: 18px ;
+  height: 18px;
+  }
+.texto p{
+  font-size: 10px;
 }
