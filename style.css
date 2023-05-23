@@ -845,6 +845,10 @@ height: 29px;
 .texto p{
   font-size: 13px;
 }
+.flip-card-back h4{
+  font-size: 20px;
+ 
+}
 }
 
 .flip-card-back .social-links {
