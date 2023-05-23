@@ -872,7 +872,11 @@ width: 30px;
   margin-top: 9px;
 }
 .flip-card-back h4{
+  font-family:  'Poppins', sans-serif;;
   font-size: 15px;
   margin-top: -5px;
   margin-bottom: 7px;
+  padding: 0px 17px;
+
 }
+
