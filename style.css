@@ -286,7 +286,7 @@ a {
   color: var(--color-claro);
 }
 .flip-card-back p{
-  padding: 0px 10px;
+  padding: 0px 17px;
 }
 .flip-card-front {
   border-radius: 12px;
