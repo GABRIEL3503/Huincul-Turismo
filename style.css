@@ -846,8 +846,9 @@ height: 29px;
   font-size: 13px;
 }
 .flip-card-back h4{
-  font-size: 20px;
- 
+  font-size: 27px;
+  text-transform: uppercase;
+
 }
 }
 
