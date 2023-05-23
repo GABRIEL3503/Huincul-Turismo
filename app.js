@@ -96,7 +96,7 @@ const elements = document.querySelectorAll(".btn-alert-opcion");
 elements.forEach(element => {
   element.addEventListener("click", () => {
     Swal.fire({
-      text: 'Paga en efectivo y asegura tu próximo viaje,                       también podes combinar con otros medio de pago!',
+      text: 'Pagá en efectivo y asegura tu próximo viaje,                       también podes combinar con otros medio de pago!',
       customClass: {
         content: 'my-swal-text'
       },
@@ -113,7 +113,7 @@ const elementsUno = document.querySelectorAll(".btn-alert-opcion1");
 elementsUno.forEach(element => {
   element.addEventListener("click", () => {
     Swal.fire({
-      text: 'Realiza tu pago de forma segura y confiable a trtavez de transferencias bancarias. Además, tienes la opción de combinarlo con otros medios de pago para mayor comodidad.',
+      text: 'Realizá tu pago de forma segura y confiable a trtavez de transferencias bancarias. Además, tenes la opción de combinarlo con otros medios de pago para mayor comodidad.',
       customClass: {
         content: 'my-swal-text'
       },
