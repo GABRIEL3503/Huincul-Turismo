@@ -859,6 +859,7 @@ p {
   }
 
   #texto p {
+    margin-bottom: 12px;
     font-size: 16px;
   }
 
