@@ -838,10 +838,14 @@ p{
 }
 
 @media only screen and (max-width: 1024px) {
+  
   .icon-tarj{
 width: 29px ;
 height: 29px;
 } 
+.logo {
+  max-height: 8.7vh;
+
 .texto p{
   font-size: 13px;
 }
