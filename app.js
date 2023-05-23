@@ -34,7 +34,7 @@ flipCards.forEach((flipCard) => {
   });
 });
 
-// menu-responsivo_iconos
+// menu-responsivo_iconoss
 
 function myFunction() {
   var x = document.getElementById("myNavbar");
