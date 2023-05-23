@@ -33,6 +33,9 @@ flipCards.forEach((flipCard) => {
     flipCardInner.style.transform = 'rotateY(180deg)';
   });
 });
+
+// menu-responsivo_iconos
+
 function myFunction() {
   var x = document.getElementById("myNavbar");
   var menuIcon = document.getElementById("menuIcon");

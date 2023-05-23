@@ -70,7 +70,7 @@ main {
 
 .close-icon {
   font-size: 22px;
-  color: white;
+  color: var(--color-principal);
 }
 
 .menu-icon {
