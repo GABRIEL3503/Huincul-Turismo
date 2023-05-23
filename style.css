@@ -895,6 +895,7 @@ p {
 }
 
 .texto h4 {
+  line-height: 1.1;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   margin-top: 7px;
