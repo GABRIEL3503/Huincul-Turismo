@@ -864,6 +864,7 @@ p {
   }
 
   #texto h4 {
+    line-height: 1.1;
     margin-bottom: 7px;
     font-size: 19px;
     text-transform: uppercase;
@@ -895,7 +896,6 @@ p {
 
 .texto h4 {
   font-family: 'Poppins', sans-serif;
-  ;
   font-size: 13px;
   margin-top: 7px;
   padding: 0px 17px;
