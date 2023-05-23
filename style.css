@@ -856,8 +856,9 @@ height: 29px;
   font-weight: 400;
   padding-left: 31px;
 }
-.contenedor-social-links {
-  align-items: center;}
+.flip-card-back  .contenedor-social-links {
+  align-items: center;
+}
 
 .flip-card-back img{
 width: 30px;
