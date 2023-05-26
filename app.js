@@ -132,7 +132,7 @@ const elementsUno = document.querySelectorAll(".btn-alert-opcion1");
 elementsUno.forEach(element => {
   element.addEventListener("click", () => {
     Swal.fire({
-      text: 'Realizá tu pago de forma segura y confiable a través de transferencias bancarias. Además, tenes la opción de combinarlo con otros medios de pago para mayor comodidad.',
+      text: 'Realizá tu pago de forma segura y confiable a través de transferencia bancaria. Además, tenes la opción de combinarlo con otros medios de pago para mayor comodidad.',
       customClass: {
         content: 'my-swal-text'
       },
@@ -149,7 +149,7 @@ const elementsDos = document.querySelectorAll(".btn-alert-opcion2");
 elementsDos.forEach(element => {
   element.addEventListener("click", () => {
     Swal.fire({
-      text: 'Flexibilidad en tus manos. Aceptamos tarjetas de crédito para que puedas reservar fácilmente tus aventuras.',
+      text: 'Flexibilidad en tus manos. Aceptamos tarjetas de crédito y débito para que puedas reservar fácilmente tus aventuras.',
       customClass: {
         content: 'my-swal-text'
       },
