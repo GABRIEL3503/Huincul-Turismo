@@ -558,7 +558,7 @@ p {
 }
 
 .titulo-color-dos {
-  color: var(---color--links);
+  color:#1ecdac;
 }
 
 h1 {
@@ -901,4 +901,118 @@ p {
   margin-top: 16px;
   padding: 0px 17px;
   margin-bottom: -9px;
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #555555;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.logo a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .nav-menu.responsive {
+    display: flex;
+    flex-direction: column;
+    background-color: #555555;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .nav-menu.responsive li {
+    margin: 20px 0;
+  }
+
+  .nav-menu.responsive li a {
+    color: #ffffff;
+  }
+
+  .nav-menu.responsive.active {
+    transform: translateX(0%);
+  }
+}
+
+.whatsapp-logo {
+  max-width: 53px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
 }
