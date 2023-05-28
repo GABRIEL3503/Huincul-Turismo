@@ -194,37 +194,3 @@ elementsCuatro.forEach(element => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('myForm');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
-
-    const formData = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formspree.io/f/mrgvvywd', true);
-    xhr.setRequestHeader('Accept', 'application/json');
-
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        form.reset(); // Limpiar los campos del formulario
-
-        // Mostrar alerta exitosa con SweetAlert2
-        Swal.fire({
-          icon: 'success',
-          title: 'Success',
-          text: 'Tu mensaje ha sido enviado. ¡Gracias!',
-        });
-      } else {
-        // Mostrar alerta de error con SweetAlert2
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
-        });
-      }
-    };
-
-    xhr.send(formData);
-  });
-});
