@@ -193,9 +193,9 @@ a {
   background-attachment: fixed;
 }
 
-.img1::before {
+/* .img1::before {
   content: "";
-  */
+  */ */
   /* Agrega un pseudo-elemento antes del contenido del contenedor */
   /* position: absolute; */
   /* Permite que el pseudo-elemento se posicione de manera absoluta en relación al contenedor */
