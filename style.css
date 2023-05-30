@@ -674,6 +674,11 @@ footer {
 }
 
 .designby {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   height: auto;
   background: linear-gradient(90deg, rgba(8, 196, 185, 0.9472163865546218) 16%, rgba(1, 158, 205, 0.9416141456582633) 49%, rgba(0, 156, 112, 0.8295693277310925) 100%);
 }
@@ -684,6 +689,10 @@ footer {
   color: white;
   float: none;
 }
+
+.designby a {
+  font-weight: 600;}
+
 
 html {
   scroll-behavior: smooth;
@@ -784,6 +793,8 @@ h2::after {
 }
 
 .mapa {
+  text-align: center;
+  max-width: 26%;
   margin-bottom: 22px;
   margin-top: 22px;
 }
@@ -791,6 +802,10 @@ h2::after {
 
 
 @media (max-width: 767px) {
+  .mapa{
+    max-width: 90%;
+    text-align: center;
+  }
   .flip-card {
     height: 62vh;
     width: 89vw;
@@ -909,4 +924,10 @@ p {
     bottom: 20px;
     right: 20px;
     z-index: 9999;
+  }
+
+
+  .mapa h3{
+    margin-bottom: 16px;
+font-size: 15px;
   }
