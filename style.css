@@ -819,7 +819,7 @@ p {
   color: var(--color-h3);
 }
 
-.contacto img {
+.contenedor-social-links img {
   width: 33px;
 }
 
@@ -902,3 +902,11 @@ p {
   padding: 0px 17px;
   margin-bottom: -9px;
 }
+
+  #whatsapp-logo {
+    max-width: 53px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
