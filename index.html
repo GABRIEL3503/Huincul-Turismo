@@ -30,7 +30,7 @@
         <a href="#nosotros" class="nav-link" onclick="closeNavbar()">Quiénes somos</a>
         <a href="#preg--frecuentes" class="nav-link" onclick="closeNavbar()">Preguntas frecuentes</a>
         <a href="#forma-de-pago" class="nav-link" onclick="closeNavbar()">Formas de pago</a>
-        <a href="#contacto" onclick="closeNavbar()">Contactanos</a>
+        <a href="#contacto" onclick="closeNavbar()">Contacto</a>
         <a href="javascript:void(0);" class="icon close-icon" onclick="myFunction()">
           <span id="menuIcon">&#9776;</span>
         </a>
@@ -256,10 +256,7 @@
       </div>
      
       
-      <button class="collapsible">¿Qué incluye el precio del paquete turístico?</button>
-      <div class="content">
-        <p>El precio del paquete turístico incluye alojamiento, transporte, tours y actividades según lo especificado en cada itinerario. También incluimos asistencia durante todo el viaje por parte de nuestro equipo de guías turísticos y asistentes.</p>
-      </div>
+   
      
     </div>
     </section>
@@ -280,9 +277,10 @@
 </section>
    <footer id="contacto">
     <h2>Contactanos</h2>
-    <h3>¡Estamos a solo un  Click de distancia! Encontrá nuestras redes sociales, correo electrónico, teléfono y dirección en los siguientes Links.</h3>
+    
     <section class="contacto">
         <div class="contenedor-social-links">
+          <h3><strong>¡Estamos a solo un  Click de distancia!</strong>  Encontrá nuestras redes sociales, correo electrónico, teléfono y dirección en los siguientes Links.</h3>
           <div>
             <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank" data-aos="fade-up" data-aos-duration="1200" style="font-size: 18px;">
               <button class="social-links">
@@ -331,14 +329,24 @@
   <h3> <strong>Horarios de atención </strong> de Lunes a Viernes de 9 a 13 y de 16 a 20 hs - Sabados de 9 a 13 hs. </h3>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.662908253571!2d-69.21477262474296!3d-38.93168159875194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960c68dcec1716e1%3A0x98f0cd2c1e226265!2sAv.%20Keidel%201438%2C%20Plaza%20Huincul%2C%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1684091804884!5m2!1ses-419!2sar" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-    <div> <img src="img/logo.png" alt="" style="width: 130px;"></div>
+    <div class="formulariocontacto"> <form id="myForm" class="form-container">
+      <h3>Completá el siguiente formulario para enviar tu consulta</h3>
+      <!-- Campos del formulario -->
+      <input type="text" name="name" placeholder="Nombre">
+      <input type="email" name="email" placeholder="Correo electrónico">
+      <input type="tel" name="phone" placeholder="Teléfono">
+      <textarea name="message" placeholder="Mensaje"></textarea>
+      <button class="btn-get-started butcard "type="submit">Enviar</button>
+    </form></div>
     
-<a href="https://api.whatsapp.com/send?phone=2995657308&text=%F0%9F%8C%8EHola%20Huincul%20Turismo!%20" target="_blank">
-  <img id="whatsapp-logo" src="img/whatsapp-logo.png" alt="WhatsApp">
-</a>
+
 </section>
 
+
 <div class="designby"> <p>Huincul Turismo S.R.L.  EVT Leg. 15350</p> <a href="https://octopuswebdesign.com.ar/">© Copyright <span style="color: blueviolet;"> <strong>Octopus</strong> </span> Web Design</a></div>
+<span><a href="https://api.whatsapp.com/send?phone=2995657308&text=%F0%9F%8C%8EHola%20Huincul%20Turismo!%20" target="_blank">
+  <img id="whatsapp-logo" src="img/whatsapp-logo.png" alt="WhatsApp">
+</a></span>
    </footer>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
