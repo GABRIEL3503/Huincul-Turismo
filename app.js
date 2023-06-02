@@ -274,7 +274,9 @@ function abrirAlert() {
     confirmButtonColor: '#2eb39a',
     confirmButtonText: 'Aceptar',
     background: 'white',
-    padding: '5px' // Modificar el padding
+    padding: '5px',
+    customClass: {
+      confirmButton: 'font-size-17px',} // Modificar el padding
   });
 }
 
@@ -323,7 +325,9 @@ function abrirAlertChil() {
     confirmButtonText: 'Aceptar',
     confirmButtonColor: '#2eb39a',
     background: 'white',
-    padding: '-10px' // Modificar el padding
+    padding: '-10px' ,
+    customClass: {
+      confirmButton: 'font-size-17px',}// Modificar el padding
   });
 }
 
@@ -370,7 +374,9 @@ function abrirAlertCat() {
     confirmButtonColor: '#2eb39a',
     confirmButtonText: 'Aceptar',
     background: 'white',
-    padding: '5px' // Modificar el padding
+    padding: '5px', // Modificar el padding
+    customClass: {
+      confirmButton: 'font-size-17px',}
   });
 }
 
@@ -421,6 +427,8 @@ function abrirAlertTerm() {
     confirmButtonColor: '#2eb39a',
     confirmButtonText: 'Aceptar',
     background: 'white',
-    padding: '5px' // Modificar el padding
+    padding: '5px', // Modificar el padding
+    customClass: {
+      confirmButton: 'font-size-17px',}
   });
 }

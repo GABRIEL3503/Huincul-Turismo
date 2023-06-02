@@ -834,7 +834,7 @@ h2::after {
 .flip-card-back .social-links {
   margin-bottom: -3px;
   max-width: 320px;
-  padding: 7px 59px;
+  padding: 11px 59px;
   font-size: 12px;
   line-height: 1.25rem;
   font-weight: 400;
@@ -842,8 +842,9 @@ h2::after {
 }
 
 .flip-card-back .contenedor-social-links {
+  margin-top: 35px;
   align-items: center;
-}
+  margin-bottom: 35px;}
 
 .flip-card-back img {
   width: 30px;
@@ -854,6 +855,7 @@ h2::after {
 }
 
 .texto h4 {
+  color: var(---color--links);
   line-height: 1.1;
   font-family: 'Poppins', sans-serif;
   font-size: 23px;
@@ -942,7 +944,7 @@ font-size: 17px;
   }
   
   .contenedor-social-links img {
-    width: 33px;
+    width: 30px;
   }
   
   #forma-de-pago {
@@ -981,7 +983,12 @@ font-size: 17px;
  
   
   
+  .font-size-17px {
+    font-size: 17px !important;
+    margin-top:-12px !important;
+  }
   
-  
-  
+  #texto p:last-child {
+    margin-bottom: 3px;
+  }
   
