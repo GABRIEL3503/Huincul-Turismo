@@ -15,30 +15,30 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-// Funcionalidad de las tarjetas de volteo ("flip-card")
-const flipCards = document.querySelectorAll('.flip-card');
+// // Funcionalidad de las tarjetas de volteo ("flip-card")
+// const flipCards = document.querySelectorAll('.flip-card');
 
-flipCards.forEach((flipCard) => {
-  const flipCardBack = flipCard.querySelector('.flip-card-back');
-  const flipCardInner = flipCard.querySelector('.flip-card-inner');
+// flipCards.forEach((flipCard) => {
+//   const flipCardBack = flipCard.querySelector('.flip-card-back');
+//   const flipCardInner = flipCard.querySelector('.flip-card-inner');
 
-  // Girar la tarjeta hacia adelante al hacer clic en la parte trasera
-  flipCardBack.addEventListener('click', function() {
-    flipCardInner.style.transform = 'rotateY(0deg)';
-  });
+//   // Girar la tarjeta hacia adelante al hacer clic en la parte trasera
+//   flipCardBack.addEventListener('click', function() {
+//     flipCardInner.style.transform = 'rotateY(0deg)';
+//   });
 
-  // Volver a girar la tarjeta hacia adelante cuando se sale de la parte trasera
-  flipCardBack.addEventListener('mouseleave', function() {
-    flipCardInner.style.transform = 'rotateY(0deg)';
-  });
+//   // Volver a girar la tarjeta hacia adelante cuando se sale de la parte trasera
+//   flipCardBack.addEventListener('mouseleave', function() {
+//     flipCardInner.style.transform = 'rotateY(0deg)';
+//   });
 
-  const btnMasInfo = flipCard.querySelector('.butcard');
+//   const btnMasInfo = flipCard.querySelector('.butcard');
 
-  // Girar la tarjeta hacia atrás al hacer clic en el botón "btnMasInfo"
-  btnMasInfo.addEventListener('click', function() {
-    flipCardInner.style.transform = 'rotateY(180deg)';
-  });
-});
+//   // Girar la tarjeta hacia atrás al hacer clic en el botón "btnMasInfo"
+//   btnMasInfo.addEventListener('click', function() {
+//     flipCardInner.style.transform = 'rotateY(180deg)';
+//   });
+// });
 
 // Funcionalidad del menú responsivo
 function myFunction() {
@@ -229,3 +229,198 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.send(formData);
   });
 });
+
+
+function abrirAlert() {
+  Swal.fire({
+    html: `
+    <style>
+    @media (min-width: 768px) {
+      .swal2-popup {
+        font-size:27px;
+        width: 50%;
+      }
+    }
+  </style>
+  <div class="flip-card-back">
+  <span id="texto" class="texto">
+  <h4>
+    Salta y Noroeste argentino: ¡Encanto y maravillas!
+  </h4>
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color:#2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> : HOTELES TRES ESTRELLAS EN VILLA CARLOS PAZ Y SALTA.
+  </P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color:#2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSION (DESAYUNO Y CENA).</P>
+    
+      <div class="contenedor-social-links">
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank" style="font-size: 18px;">
+            <button class="social-links">
+             Solicitar mas Info
+              <span>
+                <img src="img/whatsapp.png" alt="">
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    <p>Coordinacion permanete-Guias locales <br>
+     Seguro Asistencia al Viajero </p> 
+    </span>
+    </div>
+    `,
+    confirmButtonColor: '#2eb39a',
+    confirmButtonText: 'Aceptar',
+    background: 'white',
+    padding: '5px' // Modificar el padding
+  });
+}
+
+
+function abrirAlertChil() {
+  Swal.fire({
+    html: `
+    <style>
+    @media (min-width: 768px) {
+      .swal2-popup {
+        font-size:27px;
+        width: 50%;
+      }
+    }
+
+  </style>
+  <div class="flip-card-back">
+  <span id="texto" class="texto">
+                    <h4>Descubrí el sur de Chile y déjate cautivar por la belleza natural que rodea a estos destinos fascinantes.
+                    </h4>
+                    <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  6 DIAS 4 NOCHES</p>
+                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+                    <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong>  4 NOCHES EN HOTELES CATEGORIAS TRES ESTRELLAS EN BASE DOBLE, TRIPLE EN 
+                      PUCON
+                      </P>
+                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  MEDIA PENSION (DESAYUNO Y CENA).</P>
+                      
+                        <div class="contenedor-social-links">
+                          <div>
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank" style="font-size: 18px;">
+                              <button class="social-links">
+                               Solicitar mas Info
+                                <span>
+                                  <img src="img/whatsapp.png" alt="">
+                                </span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+
+                      <p>Coordinacion permanete-Guias locales <br>
+                       Seguro Asistencia al Viajero </p> 
+                      </span>
+                      </div>
+    `,
+    confirmButtonText: 'Aceptar',
+    confirmButtonColor: '#2eb39a',
+    background: 'white',
+    padding: '-10px' // Modificar el padding
+  });
+}
+
+function abrirAlertCat() {
+  Swal.fire({
+    html: `
+    <style>
+    @media (min-width: 768px) {
+      .swal2-popup {
+        font-size:27px;
+        width: 50%;
+      }
+    }
+  </style>
+  <div class="flip-card-back">
+  <span id="texto" class="texto">
+                    <h4>¡Viví la magia de las Cataratas del Iguazú y déjate sorprender!
+                    </h4>
+                    <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
+                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+                    <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong>  6 NOCHES EN HOTELES CATEGORIA TRES ESTRELLAS, BASE DOBLE, TRIPLE EN
+                      BUENOS AIRES Y FOZ DO IGUAZU.</P>
+                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  EN BUENOS AIRES DESAYUNO. EN FOZ DO IGUAZU MEDIA PENSION 
+                        (DESAYUNO Y CENA).</P>
+                      
+                        <div class="contenedor-social-links">
+                          <div>
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank"   style="font-size: 18px;">
+                              <button class="social-links">
+                               Solicitar mas Info
+                                <span>
+                                  <img src="img/whatsapp.png" alt="">
+                                </span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+
+                      <p>Coordinacion permanete-Guias locales <br>
+                       Seguro Asistencia al Viajero </p> 
+                      </span>
+                      </div>
+    `,
+    confirmButtonColor: '#2eb39a',
+    confirmButtonText: 'Aceptar',
+    background: 'white',
+    padding: '5px' // Modificar el padding
+  });
+}
+
+
+function abrirAlertTerm() {
+  Swal.fire({
+    customClass: {
+      confirmButton: 'my-swal-button'
+    },
+    html: `
+    <style>
+    @media (min-width: 768px) {
+      .swal2-popup {
+        font-size:27px;
+        width: 50%;
+      }
+    }
+    
+  </style>
+  <div class="flip-card-back">
+  <span id="texto" class="texto">
+  <h4>Termas de Río Hondo: ¡Relajación y bienestar garantizados!
+  </h4>
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  8 DIAS 5 NOCHES</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPL</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  PENSION COMPLETA</P>
+    
+      <div class="contenedor-social-links">
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank"  style="font-size: 18px;">
+            <button class="social-links">
+             Solicitar mas Info
+              <span>
+                <img src="img/whatsapp.png" alt="">
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    <p>Coordinacion permanete-Guias locales <br>
+     Seguro Asistencia al Viajero </p> 
+    </span>
+    </div>
+    `,
+
+    confirmButtonColor: '#2eb39a',
+    confirmButtonText: 'Aceptar',
+    background: 'white',
+    padding: '5px' // Modificar el padding
+  });
+}

@@ -147,7 +147,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@screen and (max-width: 600px) {
   .navbar.responsive .icon {
     top: 0;
     position: absolute;
@@ -271,7 +271,7 @@ a {
   } */
 
 .flip-card-front,
-.flip-card-back {
+.-card-back {
   border-radius: 12px;
   position: absolute;
   width: 100%;
@@ -280,7 +280,7 @@ a {
   backface-visibility: hidden;
 }
 
-.flip-card-back h1 {
+/* .flip-card-back h1 {
   margin-bottom: -4px;
   padding-top: 3px;
   font-size: 23px;
@@ -289,7 +289,7 @@ a {
 
 .flip-card-back p {
   padding: 0px 17px;
-}
+} */
 
 .flip-card-front {
   border-radius: 12px;
@@ -307,13 +307,13 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.flip-card-back {
+/* .flip-card-back {
   border-radius: 12px;
   background: rgb(8, 196, 185);
   background: linear-gradient(90deg, rgba(8, 196, 185, 0.8547794117647058) 50%, rgba(1, 158, 205, 0.9416141456582633) 90%, rgba(0, 156, 112, 0.8295693277310925) 100%);
   color: white;
   transform: rotateY(180deg);
-}
+} */
 
 #card {
   background-color: var(--color-claro);
@@ -809,8 +809,8 @@ h2::after {
 @media only screen and (max-width: 1024px) {
 
   .icon-tarj {
-    width: 29px;
-    height: 29px;
+    width: 159px;
+    height: 129px;
   }
 
   .logo {
@@ -856,7 +856,7 @@ h2::after {
 .texto h4 {
   line-height: 1.1;
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 23px;
   margin-top: 16px;
   padding: 0px 17px;
   margin-bottom: -9px;
@@ -961,15 +961,27 @@ font-size: 15px;
   
   
   .icon-tarj {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height:28px;
   }
   
-  .texto p {
-    font-size: 10px;
-  }
+
 
   #myForm .butcard {
     margin-left: 103px;
     position: static;
   }
+  #texto p {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    font-size: 16px;
+  }
+ 
+  
+  
+  
+  
+  
+  
