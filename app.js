@@ -48,7 +48,7 @@ function myFunction() {
   if (x.classList.contains("responsive")) {
     // Si el menú ya está en modo responsivo, se vuelve al modo normal
     x.classList.remove("responsive");
-    x.style.backgroundColor = ""; // Elimina el color de fondo personalizado
+   
     menuIcon.innerHTML = "&#9776;"; // Cambia el ícono de vuelta a "&#9776;"
     menuIcon.classList.remove("close-icon"); // Elimina la clase "close-icon"
     menuIcon.classList.add("menu-icon"); // Agrega la clase "menu-icon"
@@ -76,38 +76,38 @@ function closeNavbar() {
 // Inicialización de la biblioteca AOS para animaciones en el desplazamiento
 AOS.init();
 
-// Cambio de estilo de la barra de navegación al desplazarse
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  const scrolled = window.scrollY > 0;
-  navbar.classList.toggle('scrolled', scrolled);
-});
+// // Cambio de estilo de la barra de navegación al desplazarse
+// window.addEventListener('scroll', function() {
+//   const navbar = document.querySelector('.navbar');
+//   const scrolled = window.scrollY > 0;
+//   navbar.classList.toggle('scrolled', scrolled);
+// });
 
-// Cambio de estilo de la barra de navegación y el ícono del menú al desplazarse
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  const menuIcon = document.getElementById('menuIcon');
-  const scrolled = window.scrollY > 0;
+// // Cambio de estilo de la barra de navegación y el ícono del menú al desplazarse
+// window.addEventListener('scroll', function() {
+//   const navbar = document.querySelector('.navbar');
+//   const menuIcon = document.getElementById('menuIcon');
+//   const scrolled = window.scrollY > 0;
 
-  navbar.classList.toggle('scrolled', scrolled);
-  menuIcon.style.color = scrolled ? '#2eb39a' : '';
-});
+//   navbar.classList.toggle('scrolled', scrolled);
+//   menuIcon.style.color = scrolled ? '#2eb39a' : '';
+// });
 
-// Cambio de color de los enlaces de navegación al desplazarse (solo en dispositivos no móviles)
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  const links = navbar.querySelectorAll('a');
-  const isMobile = window.matchMedia('(max-width: 767px)').matches;
-  const scrolled = window.scrollY > 0;
+// // Cambio de color de los enlaces de navegación al desplazarse (solo en dispositivos no móviles)
+// window.addEventListener('scroll', function() {
+//   const navbar = document.querySelector('.navbar');
+//   const links = navbar.querySelectorAll('a');
+//   const isMobile = window.matchMedia('(max-width: 767px)').matches;
+//   const scrolled = window.scrollY > 0;
 
-  navbar.classList.toggle('scrolled', scrolled);
+//   navbar.classList.toggle('scrolled', scrolled);
 
-  for (const link of links) {
-    if (!isMobile) {
-      link.style.color = scrolled ? '#2eb39a' : '';
-    }
-  }
-});
+//   for (const link of links) {
+//     if (!isMobile) {
+//       link.style.color = scrolled ? '#2eb39a' : '';
+//     }
+//   }
+// });
 
 // Funcionalidad de los botones de alerta "btn-alert-opcion"
 const elements = document.querySelectorAll(".btn-alert-opcion");
@@ -432,3 +432,19 @@ function abrirAlertTerm() {
       confirmButton: 'font-size-17px',}
   });
 }
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <title>Huincul Turismo</title>
 </head>
@@ -40,18 +41,40 @@
   
 <main>
     <!-- =======  Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center navegacion">
+      <!-- Swiper -->
+  <div class="swiper mySwiper tite">
+   
+    <h1  class="swiper-title titi">  <span class="titulo-color-dos">TUS VIAJES CON </span><br>
+      HUINCUL  <span class="titulo-color-"> TURISMO</span>
+     </h1>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/DSC_0213 (1).jpg" alt="Random Image 1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/DSC_0324-Edit.jpg" alt="Random Image 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="img/DSC_0476.jpg" alt="Random Image 3" />
+      </div>
+      <!-- Agrega más slides según sea necesario -->
+    </div>
+   
+    <div class="swiper-pagination"></div>
+  
+  </div>
+
+  <!-- Swiper JS -->
+    <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center navegacion">
         <div class="container tite text-center text-md-left" >
           <h1  class="titi">  <span class="titulo-color-dos">TUS VIAJES SON CON </span><br>
            HUINCUL  <span class="titulo-color-"> TURISMO</span>
           </h1>
         
-    
-      <!-- <h2 class="aventura">Y estamos preparados vivirla con vos</h2> -->
 <a href="#card" class="btn-get-started scrollto">DESTINOS</a> 
       
     </div>
-  </section>
+  </section> -->
   <!-- End Hero -->
 
      <!-- hero-image -->
@@ -300,6 +323,8 @@
   <img id="whatsapp-logo" src="img/whatsapp-logo.png" alt="WhatsApp">
 </a></span>
    </footer>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
