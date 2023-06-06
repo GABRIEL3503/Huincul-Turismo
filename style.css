@@ -753,6 +753,14 @@ h2::after {
   .logo-cont {
     margin-left: -10px;
   }
+   .titi{
+    width: 80vw;
+   }
+   #tituloheader{
+    font-size: 26px;
+   }
+   
+   
 }
 
 
