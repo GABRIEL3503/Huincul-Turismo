@@ -1028,4 +1028,7 @@ font-size: 17px;
   .tite h1{
     font-size: 35px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
