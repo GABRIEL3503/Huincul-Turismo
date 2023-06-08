@@ -175,8 +175,6 @@ a {
 
 .portada {
   height: 50%;
-
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -515,7 +513,7 @@ p {
   padding: 8px 19px;
   border-radius: 4px;
   transition: 0.5s;
-  border: 2px solid #fff;
+  border: 2px solid var(---color--links);;
   color: #fff;
 }
 
@@ -523,7 +521,7 @@ p {
   font-weight: 700;
   font-size: 17px;
   color: #ffffff;
-  border-color: var(---color--links);
+  border-color:  #fff;
   background: #74747467;
 }
 
@@ -558,7 +556,7 @@ p {
 }
 
 .titulo-color-dos {
-  color:rgb(3 241 134);
+  color:rgb(35, 226, 140);
   ;
 }
 
@@ -734,9 +732,9 @@ h2::after {
   background-color: #9cffff;
 }
 
-.box-info {
-  color: #444444;
-  background: var(--color-blanco);
+.box-info h3{
+  color: #fcfcfc;
+z-index: 22;
   text-align: center;
 }
 
@@ -1031,4 +1029,37 @@ font-size: 17px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  #nosotros {
+    width: 100%;
+    height: 60vh;
+    background: url("./img/4.jpg") top center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    background-attachment: fixed;
+  }
+  
+  #nosotros:before {
+    content: "";
+    background: rgb(0 0 0 / 50%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .box-info {
+    color: white; 
+    position: relative;
+    z-index: 1; 
+  }
+  
+  .box-info h3 {
+    color: white;
+  }
+  #nosotros h2{
+    padding-top: 107px;
+    color: var(--color-claro);
   }
