@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const formData = new FormData(form);
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formspree.io/f/mrgvvywd', true);
+    xhr.open('POST', 'https://formspree.io/f/xzbqlllj', true);
     xhr.setRequestHeader('Accept', 'application/json');
 
     xhr.onload = function() {
