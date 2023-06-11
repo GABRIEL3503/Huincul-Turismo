@@ -290,7 +290,7 @@ a {
 } */
 
 .flip-card-front {
-  border-radius: 12px;
+  border-radius: 9px;
   background-color: #bbb;
   color: black;
   display: flex;
