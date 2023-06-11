@@ -1066,3 +1066,28 @@ font-size: 17px;
     padding-top: 60px;
     color: var(--color-claro);
   }
+
+  .contenedor-sec-puerta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+ 
+    #puerta-a-puerta img{
+  width: 45vw;
+    }
+    #puerta-a-puerta h3{
+      width: 40vw;
+    }
+  
+  
+  @media (max-width: 767px) {
+  #puerta-a-puerta img{
+width: 93vw;
+  }
+  #puerta-a-puerta h3{
+    width: 90vw;
+  }
+}

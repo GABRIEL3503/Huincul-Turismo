@@ -255,7 +255,7 @@ function abrirAlert() {
     
       <div class="contenedor-social-links">
         <div>
-          <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank" style="font-size: 18px;">
+          <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20%20paquete%20de%20SALTA" target="_blank" style="font-size: 18px;">
             <button class="social-links">
              Solicitar mas Info
               <span>
@@ -306,7 +306,7 @@ function abrirAlertChil() {
                       
                         <div class="contenedor-social-links">
                           <div>
-                            <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank" style="font-size: 18px;">
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20%20paquete%20del%20SUR%20DE%20CHILE%20" target="_blank" style="font-size: 18px;">
                               <button class="social-links">
                                Solicitar mas Info
                                 <span>
@@ -355,7 +355,7 @@ function abrirAlertCat() {
                       
                         <div class="contenedor-social-links">
                           <div>
-                            <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank"   style="font-size: 18px;">
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20%20paquete%20de%20CATARATAS%20DEL%20IGUAZ%C3%9A" target="_blank"   style="font-size: 18px;">
                               <button class="social-links">
                                Solicitar mas Info
                                 <span>
@@ -407,7 +407,7 @@ function abrirAlertTerm() {
     
       <div class="contenedor-social-links">
         <div>
-          <a href="https://api.whatsapp.com/send?phone=5492995657308" target="_blank"  style="font-size: 18px;">
+          <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20%20paquete%20de%20TERMAS%20DE%20RIO%20HONDO" target="_blank"  style="font-size: 18px;">
             <button class="social-links">
              Solicitar mas Info
               <span>
