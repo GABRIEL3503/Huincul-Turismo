@@ -194,6 +194,22 @@ elementsCuatro.forEach(element => {
   });
 });
 
+const elementsCinco = document.querySelectorAll(".btn-alert-opcion5");
+
+elementsCinco.forEach(element => {
+  element.addEventListener("click", () => {
+    Swal.fire({
+      text: 'En colaboración con Crediquen, podemos ofrecer opciones de financiamiento más amplias para aquellos que necesiten una mayor flexibilidad en el pago.',
+      customClass: {
+        content: 'my-swal-text'
+      },
+      showConfirmButton: true,
+      confirmButtonColor: "#2eb39a",
+      confirmButtonText: 'Entendido'
+    });
+  });
+});
+
 // formulario
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('myForm');
