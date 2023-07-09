@@ -407,8 +407,7 @@ button {
   margin-bottom: 17px;
   height: 100%;
   background: rgb(8, 196, 185);
-  background: linear-gradient(90deg, rgba(8, 196, 185, 0.9472163865546218) 16%, rgba(1, 158, 205, 0.9416141456582633) 49%, rgba(0, 156, 112, 0.8295693277310925) 100%);
-}
+  background: linear-gradient(90deg, rgb(13 133 169) 16%, rgb(25 139 122 / 94%) 79%, rgb(0 135 97) 100%)}
 
 .preguntas-frec h1 {
   text-shadow: 1px 2px 3px grey;

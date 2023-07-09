@@ -1,3 +1,83 @@
+emailjs.init('7xOT0tOQ-zRw7sDZJ')
+
+document.getElementById('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  if (validateForm()) {
+    const btn = document.getElementById('button');
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_4psdx72';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        Swal.fire('Sent!', 'El formulario se envió correctamente.', 'success').then(() => {
+          resetForm();
+        });
+      })
+      .catch((err) => {
+        btn.value = 'Send Email';
+        Swal.fire('Error!', 'Hubo un error al enviar el formulario.', 'error');
+      });
+  }
+});
+
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || phone === "" || message === "") {
+    Swal.fire('Campos incompletos!', 'Por favor, completa todos los campos del formulario.', 'warning');
+    return false;
+  }
+
+  var regex = /^\d+$/;
+  if (!regex.test(phone)) {
+    Swal.fire('Formato incorrecto!', 'El campo "Teléfono" solo puede contener valores numéricos.', 'warning');
+    return false;
+  }
+
+  return true;
+}
+
+function resetForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("message").value = "";
+}
+
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || phone === "" || message === "") {
+    Swal.fire("Por favor, completa todos los campos del formulario.");
+    return false;
+  }
+
+  var regex = /^\d+$/;
+  if (!regex.test(phone)) {
+    Swal.fire("El campo 'Teléfono' solo puede contener valores numéricos.");
+    return false;
+  }
+
+  return true;
+}
+
+function resetForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("message").value = "";
+}
+
 // Funcionalidad de los elementos "collapsible"
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -464,3 +544,5 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
