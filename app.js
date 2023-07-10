@@ -13,7 +13,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         btn.value = 'Send Email';
-        Swal.fire('Sent!', 'El formulario se envió correctamente.', 'success').then(() => {
+        Swal.fire('Enviado!', 'El formulario se envió correctamente.', 'success').then(() => {
           resetForm();
         });
       })
