@@ -679,7 +679,7 @@ h3 {
 
 .contacto {
   background-color: var(--color-claro0);
-  align-items: center;
+  align-items: baseline;
   height: auto;
   display: flex;
   justify-content: space-around;
