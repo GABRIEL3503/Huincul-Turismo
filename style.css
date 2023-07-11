@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.281); /* Fondo semitransparente */
+
 }
 
 .text-overlay h3 {
@@ -21,6 +21,7 @@
   color: #fff; /* Color del texto */
 }
 #gg{
+  font-size: 10px;
   animation:none !important;
 }
 
@@ -686,7 +687,7 @@ h3 {
 }
 .contenedor-social-links h3{
 width: 27vw;
-font-size: 15px;
+font-size: 17px;
 }
 .contenedor-social-links {
 
