@@ -529,7 +529,7 @@ p {
 }
 
 .btn-get-started {
-  margin-top: 25px;
+
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -600,10 +600,10 @@ h1 {
   ;
   font-weight: 600;
   cursor: pointer;
-  position: absolute;
-  top: 80%;
+  /* position: absolute;
+  top: 65%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   border: 2px solid var(---color--links);
   color: var(--color-principal);
   background-color: rgba(255, 255, 255, 0.849);
@@ -1121,3 +1121,57 @@ width: 93vw;
 .logo-nuevo{
   max-width: 20%;
 }
+
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  display: flex;
+  font-size: 17px;
+  font-weight: 700;
+  height: 30%;
+  padding: 6px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  justify-content: space-around;
+  align-items: center;
+color: var(---color--links);
+}
+.card p:last-child{
+color: gray;
+}
+
+.card {
+  padding-bottom: 13px;
+  width: 300px;
+  height: auto;
+  background-color:rgba(255, 255, 255, 0.849);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(---color--links);
+    color: var(--color-principal);
+}
+
+.but-form{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .boton-card:hover{
+background-color: var(---color--links);
+
+border-color: var(--color-secundario);}
