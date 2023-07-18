@@ -1140,7 +1140,7 @@ font-size: 17px;
 color: var(---color--links);
 }
 .card p:last-child{
-color: gray;
+color:#606060;
 }
 
 .card {
