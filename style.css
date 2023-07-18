@@ -533,7 +533,7 @@ p {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 19px;
@@ -1129,7 +1129,7 @@ font-size: 17px;
   display: flex;
   font-size: 17px;
   font-weight: 700;
-  height: 30%;
+  height: 7%;
   padding: 6px;
   margin: 0;
   overflow: hidden;
