@@ -531,6 +531,7 @@ function abrirAlertTerm() {
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
+  speed: 2000, // Aquí está la opción de velocidad
   autoplay: {
     delay: 3200,
     disableOnInteraction: false,
@@ -544,5 +545,3 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-

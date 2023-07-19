@@ -1180,3 +1180,9 @@ width: 93vw;
     width: 350px;
   }
 }
+.icono-texto {
+  display: flex;
+  align-items: center; /* Asegura que los ítems estén alineados verticalmente */
+  justify-content:center; /* Añadse espacio entre los elementos */
+  gap: 10px; /* Añade espacio entre los ítems del flexbox, ajusta según necesidad */
+}
