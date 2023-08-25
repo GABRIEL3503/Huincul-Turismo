@@ -1192,4 +1192,28 @@ width: 93vw;
   justify-content:center; /* Añadse espacio entre los elementos */
   gap: 10px; /* Añade espacio entre los ítems del flexbox, ajusta según necesidad */
 }
+}
 
+.whatsapp-button {
+  position: fixed; 
+  bottom: 5px; 
+  right: 2px;  
+  z-index: 1000; 
+}
+
+.whatsapp-content {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+background-color: #3dc14e; 
+  padding: 4px 13px;
+  border-radius: 20px; 
+  display: flex; 
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  margin-left: 10px; /* Espacio entre el texto y el ícono */
+  width: 30px; /* Tamaño del ícono (ajustar según sea necesario) */
+}

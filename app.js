@@ -347,7 +347,7 @@ function abrirAlert() {
   <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color:#2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
   <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> : HOTELES TRES ESTRELLAS EN VILLA CARLOS PAZ Y SALTA.
   </P>
-    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color:#2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSION (DESAYUNO Y CENA).</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color:#2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
     
       <div class="contenedor-social-links">
         <div>
@@ -362,7 +362,7 @@ function abrirAlert() {
         </div>
       </div>
 
-    <p>Coordinacion permanete-Guias locales <br>
+    <p>Coordinación permanete-Guias locales <br>
      Seguro Asistencia al Viajero </p> 
     </span>
     </div>
@@ -398,7 +398,7 @@ function abrirAlertChil() {
                     <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong>  4 NOCHES EN HOTELES CATEGORIAS TRES ESTRELLAS EN BASE DOBLE, TRIPLE EN 
                       PUCON
                       </P>
-                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  MEDIA PENSION (DESAYUNO Y CENA).</P>
+                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
                       
                         <div class="contenedor-social-links">
                           <div>
@@ -413,7 +413,7 @@ function abrirAlertChil() {
                           </div>
                         </div>
 
-                      <p>Coordinacion permanete-Guias locales <br>
+                      <p>Coordinación permanete-Guias locales <br>
                        Seguro Asistencia al Viajero </p> 
                       </span>
                       </div>
@@ -462,11 +462,64 @@ function abrirAlertCat() {
                           </div>
                         </div>
 
-                      <p>Coordinacion permanete-Guias locales <br>
+                      <p>Coordinación permanete-Guias locales <br>
                        Seguro Asistencia al Viajero </p> 
                       </span>
                       </div>
     `,
+    confirmButtonColor: '#2eb39a',
+    confirmButtonText: 'Aceptar',
+    background: 'white',
+    padding: '5px', // Modificar el padding
+    customClass: {
+      confirmButton: 'font-size-17px',}
+  });
+}
+
+
+function abrirAlertMend() {
+  Swal.fire({
+    customClass: {
+      confirmButton: 'my-swal-button'
+    },
+    html: `
+    <style>
+    @media (min-width: 768px) {
+      .swal2-popup {
+        font-size:27px;
+        width: 50%;
+      }
+    }
+    
+  </style>
+  <div class="flip-card-back">
+  <span id="texto" class="texto">
+  <h4>San Rafael y Mendoza: ¡Aventura y Relax en un solo viaje!
+  </h4>
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  6 NOCHES</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPLE</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSIÓN (Desayuno y Cena) </P>
+    
+      <div class="contenedor-social-links">
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Me%20interesa%20el%20paquete%20de%20SAN%20RAFAEL%20Y%20MENDOZA" target="_blank"  style="font-size: 18px;">
+            <button class="social-links">
+             Solicitar mas Info
+              <span>
+                <img src="img/whatsapp.png" alt="">
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    <p>Coordinación permanete-Guias locales <br>
+     Seguro Asistencia al Viajero </p> 
+    </span>
+    </div>
+    `,
+
     confirmButtonColor: '#2eb39a',
     confirmButtonText: 'Aceptar',
     background: 'white',
@@ -499,7 +552,7 @@ function abrirAlertTerm() {
   <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  8 DIAS 5 NOCHES</p>
   <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
   <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPL</P>
-    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  PENSION COMPLETA</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  PENSIÓN COMPLETA</P>
     
       <div class="contenedor-social-links">
         <div>
@@ -514,7 +567,7 @@ function abrirAlertTerm() {
         </div>
       </div>
 
-    <p>Coordinacion permanete-Guias locales <br>
+    <p>Coordinación permanete-Guias locales <br>
      Seguro Asistencia al Viajero </p> 
     </span>
     </div>
@@ -528,6 +581,12 @@ function abrirAlertTerm() {
       confirmButton: 'font-size-17px',}
   });
 }
+
+
+
+
+
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
