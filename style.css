@@ -1423,3 +1423,7 @@ body.dark-mode #forma-de-pago::before {
 .switch-container{
   display: flex;
 }
+
+.dark-mode  .swal2-html-container{
+  color: white!important;
+}
