@@ -343,11 +343,11 @@ function abrirAlert() {
   <h4>
     Salta y Noroeste argentino: ¡Encanto y maravillas!
   </h4>
-  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
-  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color:#2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
-  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> : HOTELES TRES ESTRELLAS EN VILLA CARLOS PAZ Y SALTA.
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style"stro";">ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style"stro"style="color:#2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style"stro"style="color: #2C3B4E;">ALOJAMIENTO: </strong> : HOTELES TRES ESTRELLAS EN VILLA CARLOS PAZ Y SALTA.
   </P>
-    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color:#2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong strong style"stro"">REGIMEN DE COMIDAS: </strong style"stro">MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
     
       <div class="contenedor-social-links">
         <div>
@@ -391,14 +391,14 @@ function abrirAlertChil() {
   </style>
   <div class="flip-card-back">
   <span id="texto" class="texto">
-                    <h4>Descubrí el sur de Chile y déjate cautivar por la belleza natural que rodea a estos destinos fascinantes.
+                    <h4>La playa argentina donde la arena dorada y las aguas cristalinas te esperan. Con Huincul Turismo, tu descanso será una experiencia inolvidable
                     </h4>
-                    <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  6 DIAS 4 NOCHES</p>
-                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
-                    <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong>  4 NOCHES EN HOTELES CATEGORIAS TRES ESTRELLAS EN BASE DOBLE, TRIPLE EN 
-                      PUCON
+                    <p><box-icon class="icon-tarj" type='solid' name='calendar'  color='#4EB3D3'  > </box-icon> <br>  <strong clas="" #2C3B4E;">ESTADIA: </strong>  5 DIAS 4 NOCHES</p>
+                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3'   ></box-icon> <br> <strong >TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+                    <P><box-icon class="icon-tarj" name='hotel' type='solid' color='#4EB3D3'  ></box-icon> <br><strong ">ALOJAMIENTO: </strong>  4 NOCHES EN HOTELES CATEGORIAS TRES ESTRELLAS EN BASE DOBLE, TRIPLE EN 
+                      
                       </P>
-                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
+                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="">REGIMEN DE COMIDAS: </strong>  MEDIA PENSIÓN (DESAYUNO Y CENA).</P>
                       
                         <div class="contenedor-social-links">
                           <div>
@@ -442,11 +442,11 @@ function abrirAlertCat() {
   <span id="texto" class="texto">
                     <h4>¡Viví la magia de las Cataratas del Iguazú y déjate sorprender!
                     </h4>
-                    <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
-                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
-                    <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong>  6 NOCHES EN HOTELES CATEGORIA TRES ESTRELLAS, BASE DOBLE, TRIPLE EN
+                    <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong >ESTADIA: </strong> 10 DIAS, 6 NOCHES.</p>
+                    <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong >TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+                    <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong >ALOJAMIENTO: </strong>  6 NOCHES EN HOTELES CATEGORIA TRES ESTRELLAS, BASE DOBLE, TRIPLE EN
                       BUENOS AIRES Y FOZ DO IGUAZU.</P>
-                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  EN BUENOS AIRES DESAYUNO. EN FOZ DO IGUAZU MEDIA PENSION 
+                      <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong >REGIMEN DE COMIDAS: </strong>  EN BUENOS AIRES DESAYUNO. EN FOZ DO IGUAZU MEDIA PENSION 
                         (DESAYUNO Y CENA).</P>
                       
                         <div class="contenedor-social-links">
@@ -496,10 +496,10 @@ function abrirAlertMend() {
   <span id="texto" class="texto">
   <h4>San Rafael y Mendoza: ¡Aventura y Relax en un solo viaje!
   </h4>
-  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  6 NOCHES</p>
-  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
-  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPLE</P>
-    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>MEDIA PENSIÓN (Desayuno y Cena) </P>
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong>ESTADIA: </strong>  6 NOCHES</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br>>TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong>ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPLE</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong>REGIMEN DE COMIDAS: </strong>MEDIA PENSIÓN (Desayuno y Cena) </P>
     
       <div class="contenedor-social-links">
         <div>
@@ -549,10 +549,10 @@ function abrirAlertTerm() {
   <span id="texto" class="texto">
   <h4>Termas de Río Hondo: ¡Relajación y bienestar garantizados!
   </h4>
-  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong style="color: #2C3B4E;">ESTADIA: </strong>  8 DIAS 5 NOCHES</p>
-  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong style="color: #2C3B4E;">TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
-  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong style="color: #2C3B4E;">ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPL</P>
-    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong style="color: #2C3B4E;">REGIMEN DE COMIDAS: </strong>  PENSIÓN COMPLETA</P>
+  <p><box-icon class="icon-tarj" type='solid' name='calendar' color='#4EB3D3' > </box-icon> <br>  <strong>ESTADIA: </strong>  8 DIAS 5 NOCHES</p>
+  <p> <box-icon class="icon-tarj" name='bus'  color='#4EB3D3' ></box-icon> <br> <strong>TRANSPORTE: </strong>  BUS SEMI-CAMA, BAR, DVD, BAÑO, AMBIENTE CLIMATIZADO.</p>
+  <P><box-icon class="icon-tarj" name='hotel' type='solid'color='#4EB3D3' ></box-icon> <br><strong>ALOJAMIENTO: </strong> HOTEL 3 ESTRELLAS BASE DOBLE/TRIPL</P>
+    <P> <box-icon class="icon-tarj" name='restaurant' color='#4EB3D3' ></box-icon><br> <strong>REGIMEN DE COMIDAS: </strong>  PENSIÓN COMPLETA</P>
     
       <div class="contenedor-social-links">
         <div>
@@ -603,4 +603,25 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const darkModeSwitch = document.querySelector(".switch__input");
+
+  darkModeSwitch.addEventListener("change", function() {
+    if (this.checked) {
+      document.body.classList.add("dark-mode");
+      const swalPopups = document.querySelectorAll('.my-swal');
+      swalPopups.forEach(popup => {
+        popup.classList.add('dark-mode');
+      });
+    } else {
+      document.body.classList.remove("dark-mode");
+      const swalPopups = document.querySelectorAll('.my-swal');
+      swalPopups.forEach(popup => {
+        popup.classList.remove('dark-mode');
+      });
+    }
+  });
 });

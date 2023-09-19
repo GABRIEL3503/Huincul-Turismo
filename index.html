@@ -36,6 +36,33 @@
     <div class="navbar" id="myNavbar">
       <a href="#tituloheader" class="logo-cont"><img class="logo" src="img/Iso-Logo Horizontal VC.png" alt=""></a>
       <div class="navegacion">
+
+        <div class="switch-container">
+          <label class="switch">
+            <input class="switch__input" type="checkbox" role="switch">
+            <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
+                <circle cx="6" cy="6" r="2" />
+                <g stroke-dasharray="1.5 1.5">
+                  <polyline points="6 10,6 11.5" transform="rotate(0,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(45,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(90,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(135,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(180,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(225,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(270,6,6)" />
+                  <polyline points="6 10,6 11.5" transform="rotate(315,6,6)" />
+                </g>
+              </g>
+            </svg>
+            <svg class="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
+                <path d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"/>
+              </g>	
+            </svg>
+            <span class="switch__sr">Dark Mode</span>
+          </label>
+        </div>
         <a href="#tituloheader" class="nav-link" onclick="closeNavbar()">Inicio</a>
         <a href="#destinos" class="nav-link" onclick="closeNavbar()">Destinos</a>
         <a href="#nosotros" class="nav-link" onclick="closeNavbar()">Quiénes somos</a>
@@ -85,6 +112,9 @@
         <div class="swiper-slide">
           <img src="img/9.png" alt="Random Image 0" />
         </div>
+        <div class="swiper-slide">
+          <img src="img/calafate.jpg" alt="Random Image 0" />
+        </div>
         <!-- Agrega más slides según sea necesario -->
       </div>
 
@@ -124,13 +154,13 @@
               onclick="abrirAlertTerm()" class="boton-card btn-get-started scrollto butcard">MAS INFO</a> </p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <!-- <div class="card" data-aos="fade-up" data-aos-duration="1500">
           <img src="img/chiile.jpg" alt="Avatar">
 
           <p>PUCÓN VALDIVIA Y TEMUCO</p>
           <p style="font-size: 15px;"><box-icon name='calendar-event' color='#606060'></box-icon> 23 DE ABRIL <a
               onclick="abrirAlertChil()" class="boton-card btn-get-started scrollto butcard">MAS INFO</a></p>
-        </div>
+        </div> -->
         <div class="card" data-aos="fade-up" data-aos-duration="1500">
           <img src="img/mza2.jpg" alt="Avatar">
 
@@ -152,6 +182,13 @@
           <p>MAR DEL PLATA</p>
           <p style="font-size: 15px;"> <box-icon name='calendar-event' color='#606060'></box-icon> 11 DE ENERO <a
               onclick="" class="boton-card boton-card btn-get-started scrollto butcard">MAS INFO</a></p>
+        </div>
+          <div class="card" data-aos="fade-up" data-aos-duration="1500">
+          <img src="img/necochea.jpg" alt="Avatar">
+
+          <p>NECOCHEA</p>
+          <p style="font-size: 15px;"><box-icon name='calendar-event' color='#606060'></box-icon> 24 DE ENERO <a
+              onclick="abrirAlertChil()" class="boton-card btn-get-started scrollto butcard">MAS INFO</a></p>
         </div>
         <div class="card" data-aos="fade-up" data-aos-duration="1500">
           <img src="img/calafa4.jpg" alt="Avatar">
