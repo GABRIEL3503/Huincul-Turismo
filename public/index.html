@@ -36,7 +36,8 @@
     <div class="navbar" id="myNavbar">
       <a href="#tituloheader" class="logo-cont"><img class="logo" src="img/Iso-Logo Horizontal VC.png" alt=""></a>
       <div class="navegacion">
-
+<!-- Modificar el botón de login en la navegación -->
+<a href="#" data-action="admin-login" class="nav-link">Admin</a>
         <div class="switch-container">
           <label class="switch">
             <input class="switch__input" type="checkbox" role="switch">
@@ -432,6 +433,49 @@
     </span>
     
     </footer>
+
+
+    <div id="loginPopup" class="popup">
+      <div class="popup-content">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <button type="submit">Ingresar</button>
+          <button type="button" onclick="closePopup('loginPopup')">Cancelar</button>
+        </form>
+      </div>
+    </div>
+    
+    <div id="destinoFormPopup" class="popup">
+      <div class="popup-content">
+        <h2>Gestionar Destino</h2>
+        <form id="destinoForm" enctype="multipart/form-data">
+          <input type="text" name="titulo" placeholder="Título">
+          <input type="date" name="fecha">
+          <input type="file" name="imagen" accept="image/*">
+          <input type="file" name="pdf" accept="application/pdf">
+          <textarea name="frase_corta" placeholder="Frase corta"></textarea>
+          <textarea name="estadia" placeholder="Estadía"></textarea>
+          <textarea name="transporte" placeholder="Transporte"></textarea>
+          <textarea name="alojamiento" placeholder="Alojamiento"></textarea>
+          <textarea name="regimen_comidas" placeholder="Régimen de comidas"></textarea>
+          <button type="submit">Guardar</button>
+          <button type="button" onclick="closePopup('destinoFormPopup')">Cancelar</button>
+        </form>
+      </div>
+    </div>
+    
+    <div id="destinoInfoPopup" class="popup">
+      <div class="popup-content">
+        <h2 id="destinoTitle"></h2>
+        <div id="destinoInfo"></div>
+        <iframe id="pdfViewer" style="width: 100%; height: 500px; display: none;"></iframe>
+        <button type="button" onclick="closePopup('destinoInfoPopup')">Cerrar</button>
+      </div>
+    </div>
+    
+    <!-- Botón flotante para agregar nuevo destino (solo visible para admin) -->
+    <button id="addDestinoBtn" class="add-destino-btn admin-control" onclick="showPopup('destinoFormPopup')">+</button>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -439,7 +483,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+    <script src="admin.js"></script>
     <script src="app.js"></script>
+
 
   </main>
 </body>

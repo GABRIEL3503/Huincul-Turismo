@@ -1,0 +1,28 @@
+{
+  "name": "huincul-turismo-autoadmin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GABRIEL3503/Huincul-Turismo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GABRIEL3503/Huincul-Turismo/issues"
+  },
+  "homepage": "https://github.com/GABRIEL3503/Huincul-Turismo#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.33.5",
+    "sqlite3": "^5.1.7"
+  }
+}

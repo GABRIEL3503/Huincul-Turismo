@@ -1427,3 +1427,166 @@ body.dark-mode #forma-de-pago::before {
 .dark-mode  .swal2-html-container{
   color: white!important;
 }
+
+
+/* Estilos para elementos de administración */
+.admin-control {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilos para popups */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 340px;
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup input,
+.popup textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.popup textarea {
+  height: 22px;
+  min-height: 18px;
+  resize: vertical;
+}
+
+.popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.popup button[type="button"] {
+  background-color: #f44336;
+}
+
+/* Estilos para el botón de crear nuevo destino */
+.add-destino-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-destino-btn.visible {
+  display: flex;
+}.card {
+  position: relative;
+}
+
+.card .admin-control {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: none; /* Se mostrará con showAdminControls() */
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.card .admin-control button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card .edit-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.card .delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+ 
+  .popup-content {
+    height: 90vh;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 340px;
+  }
+  .popup input, .popup textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px}
+}
+
