@@ -195,20 +195,8 @@ app.post('/api/destinos', upload.fields([
 
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
 
-    let imagen_url = null;
-    if (req.files && req.files['imagen']) {
-      console.log('✅ Imagen detectada...');
-      const imagePath = req.files['imagen'][0].path;
-      imagen_url = '/uploads/images/' + path.basename(imagePath);
-    }
-
-    let pdf_url = null;
-    if (req.files && req.files['pdf']) {
-      console.log('✅ PDF detectado...');
-      const pdfPath = req.files['pdf'][0].path;
-      // await compressPDF(pdfPath);  // ⚠️ Posible punto de fallo
-      pdf_url = '/uploads/pdfs/' + path.basename(pdfPath);
-    }
+    let imagen_url = req.files?.imagen ? '/uploads/images/' + path.basename(req.files['imagen'][0].path) : '';
+    let pdf_url = req.files?.pdf ? '/uploads/pdfs/' + path.basename(req.files['pdf'][0].path) : '';  // 🔹 Asegurar que no sea null
 
     console.log('📝 Preparando para insertar en la base de datos...');
     console.log(`📌 Título: ${titulo}, Fecha: ${fecha}, Imagen: ${imagen_url}, PDF: ${pdf_url}`);
@@ -219,7 +207,7 @@ app.post('/api/destinos', upload.fields([
     `;
 
     db.run(sql, [
-      titulo, fecha, imagen_url, pdf_url, frase_corta, estadia, transporte, alojamiento, regimen_comidas
+      titulo, fecha, imagen_url, pdf_url, frase_corta || '', estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
     ], function(err) {
       if (err) {
         console.error('❌ Error en la base de datos:', err);
