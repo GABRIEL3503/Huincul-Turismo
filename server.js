@@ -171,7 +171,7 @@ app.get('/api/destinos', (req, res) => {
 });
 
 // Crear nuevo destino
-app.post('/api/destinos', requireAuth, upload.fields([
+app.post('/api/destinos', upload.fields([
   { name: 'imagen', maxCount: 1 },
   { name: 'pdf', maxCount: 1 }
 ]), async (req, res) => {
