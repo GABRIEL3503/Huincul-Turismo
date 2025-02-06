@@ -206,11 +206,13 @@ app.post('/api/destinos', upload.fields([
     if (req.files && req.files['pdf']) {
       console.log('✅ PDF detectado...');
       const pdfPath = req.files['pdf'][0].path;
-      await compressPDF(pdfPath);
+      // await compressPDF(pdfPath);  // ⚠️ Posible punto de fallo
       pdf_url = '/uploads/pdfs/' + path.basename(pdfPath);
     }
 
-    console.log('📝 Insertando en la base de datos...');
+    console.log('📝 Preparando para insertar en la base de datos...');
+    console.log(`📌 Título: ${titulo}, Fecha: ${fecha}, Imagen: ${imagen_url}, PDF: ${pdf_url}`);
+
     const sql = `
       INSERT INTO destinos (titulo, fecha, imagen_url, pdf_url, frase_corta, estadia, transporte, alojamiento, regimen_comidas)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -233,6 +235,7 @@ app.post('/api/destinos', upload.fields([
     res.status(500).json({ error: error.message });
   }
 });
+
 
 // Actualizar destino
 app.put('/api/destinos/:id', requireAuth, upload.fields([
