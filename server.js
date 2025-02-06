@@ -22,8 +22,13 @@ app.use(session({
   secret: 'tu_clave_secreta',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false }
+  cookie: { 
+    secure: false,  // ⚠ Cambiar a true solo si usas HTTPS
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000 // 1 día de sesión activa
+  }
 }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
