@@ -1590,3 +1590,11 @@ body.dark-mode #forma-de-pago::before {
     font-size: 12px}
 }
 
+.card-content{
+  display: flex
+  ;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+}   

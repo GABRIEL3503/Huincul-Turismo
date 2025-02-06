@@ -8,7 +8,7 @@ const fs = require('fs');
 const { PDFDocument } = require('pdf-lib');
 
 const app = express();
-const port = 3000;
+const port = 3026;
 
 // Crear directorios para almacenamiento si no existen
 ['uploads', 'uploads/images', 'uploads/pdfs'].forEach(dir => {
