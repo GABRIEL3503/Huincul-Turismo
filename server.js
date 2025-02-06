@@ -190,19 +190,20 @@ app.post('/api/destinos', upload.fields([
   { name: 'pdf', maxCount: 1 }
 ]), async (req, res) => {
   try {
-    console.log('Datos recibidos:', req.body);  // <-- Agregar logs para depurar
+    console.log('Datos recibidos:', req.body);
     console.log('Archivos recibidos:', req.files);
+
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
     
     let imagen_url = null;
-    if (req.files['imagen']) {
+    if (req.files && req.files['imagen']) {
       const imagePath = req.files['imagen'][0].path;
-      await processImage(imagePath);
+      // await processImage(imagePath);  // 🔹 Comentado temporalmente
       imagen_url = '/uploads/images/' + path.basename(imagePath);
     }
 
     let pdf_url = null;
-    if (req.files['pdf']) {
+    if (req.files && req.files['pdf']) {
       const pdfPath = req.files['pdf'][0].path;
       await compressPDF(pdfPath);
       pdf_url = '/uploads/pdfs/' + path.basename(pdfPath);
@@ -226,6 +227,7 @@ app.post('/api/destinos', upload.fields([
       });
     });
   } catch (error) {
+    console.error('Error en POST /api/destinos:', error);
     res.status(500).json({ error: error.message });
   }
 });
