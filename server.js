@@ -144,12 +144,14 @@ async function compressPDF(inputPath) {
 
 // Middleware de autenticación
 const requireAuth = (req, res, next) => {
+  console.log('Estado de la sesión:', req.session);
   if (req.session.isAuthenticated) {
-    next();
+      next();
   } else {
-    res.status(401).json({ error: 'No autorizado' });
+      res.status(401).json({ error: 'No autorizado' });
   }
 };
+
 
 // Rutas CRUD
 
