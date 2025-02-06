@@ -196,23 +196,29 @@ app.post('/api/destinos', upload.fields([
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
 
     let imagen_url = req.files?.imagen ? '/uploads/images/' + path.basename(req.files['imagen'][0].path) : '';
-    let pdf_url = req.files?.pdf ? '/uploads/pdfs/' + path.basename(req.files['pdf'][0].path) : '';  // 🔹 Asegurar que no sea null
+    let pdf_url = req.files?.pdf ? '/uploads/pdfs/' + path.basename(req.files['pdf'][0].path) : ''; 
 
     console.log('📝 Preparando para insertar en la base de datos...');
-    console.log(`📌 Título: ${titulo}, Fecha: ${fecha}, Imagen: ${imagen_url}, PDF: ${pdf_url}`);
+    console.log('📌 Título:', titulo, 'Fecha:', fecha, 'Imagen:', imagen_url, 'PDF:', pdf_url);
 
     const sql = `
       INSERT INTO destinos (titulo, fecha, imagen_url, pdf_url, frase_corta, estadia, transporte, alojamiento, regimen_comidas)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
+    console.log('📝 Ejecutando consulta SQL...');
+    console.log('🔹 Valores:', [
+      titulo, fecha, imagen_url, pdf_url, frase_corta || '', 
+      estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
+    ]);
+
     db.run(sql, [
-      titulo, fecha, imagen_url, pdf_url, frase_corta || '', estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
+      titulo, fecha, imagen_url, pdf_url, frase_corta || '', 
+      estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
     ], function(err) {
       if (err) {
-        console.error('❌ Error en la base de datos:', err);
-        res.status(500).json({ error: err.message });
-        return;
+        console.error('❌ Error en la base de datos:', err.message);
+        return res.status(500).json({ error: err.message });
       }
       console.log('✅ Registro insertado correctamente con ID:', this.lastID);
       res.json({ id: this.lastID, success: true });
