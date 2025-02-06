@@ -184,50 +184,52 @@ app.get('/api/destinos', (req, res) => {
   });
 });
 
-// Crear nuevo destino
 app.post('/api/destinos', upload.fields([
   { name: 'imagen', maxCount: 1 },
   { name: 'pdf', maxCount: 1 }
 ]), async (req, res) => {
   try {
-    console.log('Datos recibidos:', req.body);
-    console.log('Archivos recibidos:', req.files);
+    console.log('📥 Recibiendo datos...');
+    console.log('🔹 Datos recibidos:', req.body);
+    console.log('🖼 Archivos recibidos:', req.files);
 
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
-    
+
     let imagen_url = null;
     if (req.files && req.files['imagen']) {
+      console.log('✅ Imagen detectada...');
       const imagePath = req.files['imagen'][0].path;
-      // await processImage(imagePath);  // 🔹 Comentado temporalmente
       imagen_url = '/uploads/images/' + path.basename(imagePath);
     }
 
     let pdf_url = null;
     if (req.files && req.files['pdf']) {
+      console.log('✅ PDF detectado...');
       const pdfPath = req.files['pdf'][0].path;
       await compressPDF(pdfPath);
       pdf_url = '/uploads/pdfs/' + path.basename(pdfPath);
     }
 
+    console.log('📝 Insertando en la base de datos...');
     const sql = `
       INSERT INTO destinos (titulo, fecha, imagen_url, pdf_url, frase_corta, estadia, transporte, alojamiento, regimen_comidas)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
-    
+
     db.run(sql, [
       titulo, fecha, imagen_url, pdf_url, frase_corta, estadia, transporte, alojamiento, regimen_comidas
     ], function(err) {
       if (err) {
+        console.error('❌ Error en la base de datos:', err);
         res.status(500).json({ error: err.message });
         return;
       }
-      res.json({
-        id: this.lastID,
-        success: true
-      });
+      console.log('✅ Registro insertado correctamente con ID:', this.lastID);
+      res.json({ id: this.lastID, success: true });
     });
+
   } catch (error) {
-    console.error('Error en POST /api/destinos:', error);
+    console.error('❌ Error general en POST /api/destinos:', error);
     res.status(500).json({ error: error.message });
   }
 });

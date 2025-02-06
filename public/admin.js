@@ -172,24 +172,35 @@ async function handleDestinoSubmit(e) {
     const formData = new FormData(form);
     const id = form.dataset.id;
 
+    // 1️⃣ Verificar autenticación antes de enviar
+    const authResponse = await fetch('/api/check-auth');
+    const authData = await authResponse.json();
+    if (!authData.authenticated) {
+        alert('Tu sesión ha expirado. Por favor, inicia sesión nuevamente.');
+        return;
+    }
+
     try {
         const url = id ? `/api/destinos/${id}` : '/api/destinos';
         const method = id ? 'PUT' : 'POST';
 
         const response = await fetch(url, {
             method: method,
+            credentials: 'include', // Asegurar envío de cookies de sesión
             body: formData
         });
 
         if (response.ok) {
             location.reload();
         } else {
-            alert('Error al guardar destino');
+            const errorText = await response.text();
+            alert(`Error al guardar destino: ${errorText}`);
         }
     } catch (error) {
         alert('Error al procesar la solicitud');
     }
 }
+
 
 // Funciones de UI
 function showNewDestinoForm() {
