@@ -32,6 +32,9 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
 app.use(express.static('public'));
 app.use('/uploads', express.static('uploads')); // Servir archivos subidos
 
@@ -55,7 +58,6 @@ db.run(`
   )
 `);
 
-// Configuración de Multer con validación de tamaño
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     const dest = file.fieldname === 'imagen' ? 'uploads/images' : 'uploads/pdfs';
@@ -64,6 +66,20 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
     cb(null, uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 5 * 1024 * 1024 }, // Máximo 5MB
+  fileFilter: (req, file, cb) => {
+    if (file.fieldname === 'pdf' && file.mimetype !== 'application/pdf') {
+      return cb(new Error('Solo se permiten archivos PDF'));
+    }
+    if (file.fieldname === 'imagen' && !file.mimetype.startsWith('image/')) {
+      return cb(new Error('Solo se permiten imágenes'));
+    }
+    cb(null, true);
   }
 });
 
@@ -90,10 +106,6 @@ const fileFilter = (req, file, cb) => {
   cb(null, true);
 };
 
-const upload = multer({
-  storage: storage,
-  fileFilter: fileFilter
-});
 
 // Función para procesar imagen
 async function processImage(imagePath) {
@@ -176,6 +188,8 @@ app.post('/api/destinos', upload.fields([
   { name: 'pdf', maxCount: 1 }
 ]), async (req, res) => {
   try {
+    console.log('Datos recibidos:', req.body);  // <-- Agregar logs para depurar
+    console.log('Archivos recibidos:', req.files);
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
     
     let imagen_url = null;
