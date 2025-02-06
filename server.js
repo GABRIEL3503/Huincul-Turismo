@@ -333,6 +333,10 @@ app.get('/api/destinos/:id', (req, res) => {
       res.json(destino);
   });
 });
+app.get('/api/check-auth', (req, res) => {
+  res.json({ authenticated: !!req.session.isAuthenticated });
+});
+
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
