@@ -208,21 +208,23 @@ app.post('/api/destinos', upload.fields([
 
     console.log('📝 Ejecutando consulta SQL...');
     console.log('🔹 Valores:', [
-      titulo, fecha, imagen_url, pdf_url, frase_corta || '', 
+      titulo, fecha, imagen_url || '', pdf_url || '', frase_corta || '', 
       estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
     ]);
-
+    
     db.run(sql, [
-      titulo, fecha, imagen_url, pdf_url, frase_corta || '', 
+      titulo, fecha, imagen_url || '', pdf_url || '', frase_corta || '', 
       estadia || '', transporte || '', alojamiento || '', regimen_comidas || ''
     ], function(err) {
       if (err) {
         console.error('❌ Error en la base de datos:', err.message);
-        return res.status(500).json({ error: err.message });
+        res.status(500).json({ error: err.message });
+        return;
       }
       console.log('✅ Registro insertado correctamente con ID:', this.lastID);
       res.json({ id: this.lastID, success: true });
     });
+    
 
   } catch (error) {
     console.error('❌ Error general en POST /api/destinos:', error);
