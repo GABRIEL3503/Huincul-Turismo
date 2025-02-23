@@ -731,7 +731,7 @@ html {
 }
 
 .contacto {
-  margin-bottom: 41px;
+  margin-bottom: 180px;
 }
 
 h2 {
@@ -1432,10 +1432,14 @@ body.dark-mode #forma-de-pago::before {
 /* Estilos para elementos de administración */
 .admin-control {
   display: none;
-  position: absolute;
   top: 10px;
   right: 10px;
   z-index: 100;
+}
+.btn-agregar{
+  display: flex
+  ;
+      justify-content: center;
 }
 
 .edit-btn,

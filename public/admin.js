@@ -6,7 +6,7 @@ const isAuthenticated = () => {
 const showAdminControls = () => {
     const adminControls = document.querySelectorAll('.admin-control');
     adminControls.forEach(control => {
-        control.style.display = isAuthenticated() ? 'block' : 'none';
+        control.style.display = isAuthenticated() ? 'flex' : 'none';
     });
 };
 
@@ -62,10 +62,8 @@ const infoPopup = `
         </div>
     </div>
 `;
-
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
-    // Primero removemos cualquier popup existente para evitar duplicados
+    // Eliminar elementos duplicados si ya existen
     ['adminLoginPopup', 'destinoFormPopup', 'infoPopup', 'addDestinoBtn'].forEach(id => {
         const existingElement = document.getElementById(id);
         if (existingElement) {
@@ -73,45 +71,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Agregamos los popups y el botón de añadir
+    // Insertar el botón "Agregar Destino" dentro de un span en la sección "Destinos"
+    const destinoTitle = document.querySelector('h2.destinos');
+    if (destinoTitle) {
+        // Crear un span con clase btn-agregar y agregar el botón dentro
+        const spanContainer = document.createElement('span');
+        spanContainer.className = 'btn-agregar';
+        spanContainer.innerHTML = `
+            <button id="addDestinoBtn" class="admin-control add-button" onclick="showNewDestinoForm()">Agregar Destino</button>
+        `;
+        
+        // Insertar el span después del h2 "Destinos"
+        destinoTitle.insertAdjacentElement('afterend', spanContainer);
+    }
+
+    // Insertar popups
     const elements = [
         { html: loginPopup, id: 'adminLoginPopup' },
         { html: destinoForm, id: 'destinoFormPopup' },
-        { html: infoPopup, id: 'infoPopup' },
-        { 
-            html: '<button id="addDestinoBtn" class="admin-control add-button" onclick="showNewDestinoForm()">+</button>',
-            id: 'addDestinoBtn'
-        }
+        { html: infoPopup, id: 'infoPopup' }
     ];
 
-    // Insertamos cada elemento verificando que no exista previamente
     elements.forEach(element => {
         if (!document.getElementById(element.id)) {
             document.body.insertAdjacentHTML('beforeend', element.html);
         }
     });
 
-    // Configuramos los event listeners una sola vez
+    // Configurar eventos y autenticación
     setupEventListeners();
-    
-    // Actualizamos la interfaz según el estado de autenticación
     showAdminControls();
     createAdminControls();
-
-    // Verificamos si ya estamos autenticados
     if (isAuthenticated()) {
-        console.log('Usuario ya autenticado');
+        console.log('Usuario autenticado');
         showAdminControls();
     } else {
         console.log('Usuario no autenticado');
-        // Ocultamos los controles de admin
         document.querySelectorAll('.admin-control').forEach(control => {
             control.style.display = 'none';
         });
     }
     loadDestinos();
-
 });
+
 
 
 // Eliminar la segunda definición de setupEventListeners y modificar la primera:
