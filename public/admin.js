@@ -291,70 +291,45 @@ async function deleteDestino(button) {
 async function showDestinInfo(button) {
     const card = button.closest('.card');
     const id = card.dataset.id;
-    
+
     try {
         const response = await fetch(`/api/destinos/${id}`);
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
         const destino = await response.json();
-        
-        // Formatear la fecha para mostrarla
-        const fecha = new Date(destino.fecha).toLocaleDateString('es-AR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-        
+
         document.getElementById('infoTitle').textContent = destino.titulo;
-        
-        const infoContent = `
-            <p class="info-fecha">${fecha}</p>
-            ${destino.frase_corta ? `<p class="info-frase">${destino.frase_corta}</p>` : ''}
-            <div class="info-details">
-                ${destino.estadia ? `
-                    <h3>Estadía:</h3>
-                    <p>${destino.estadia}</p>
-                ` : ''}
-                ${destino.transporte ? `
-                    <h3>Transporte:</h3>
-                    <p>${destino.transporte}</p>
-                ` : ''}
-                ${destino.alojamiento ? `
-                    <h3>Alojamiento:</h3>
-                    <p>${destino.alojamiento}</p>
-                ` : ''}
-                ${destino.regimen_comidas ? `
-                    <h3>Régimen de comidas:</h3>
-                    <p>${destino.regimen_comidas}</p>
-                ` : ''}
-            </div>
+        document.getElementById('infoContent').innerHTML = `
+            <p class="info-fecha">${destino.fecha}</p>
+            <p class="info-frase">${destino.frase_corta || ''}</p>
         `;
-        
-        document.getElementById('infoContent').innerHTML = infoContent;
-        
+
         const pdfViewer = document.getElementById('pdfViewer');
+        const togglePdfButton = document.querySelector('.info-buttons button');
+
         if (destino.pdf_url) {
-            pdfViewer.src = destino.pdf_url;
-            pdfViewer.style.display = 'none'; // Inicialmente oculto
-            document.querySelector('.info-buttons').style.display = 'block';
+            pdfViewer.src = destino.pdf_url;  // 🔥 Ahora asignamos la URL correctamente
+            pdfViewer.style.display = 'none';
+            togglePdfButton.style.display = 'block'; // Mostrar botón si hay PDF
         } else {
             pdfViewer.style.display = 'none';
-            document.querySelector('.info-buttons').style.display = 'none';
+            togglePdfButton.style.display = 'none'; // Ocultar botón si no hay PDF
         }
-        
+
         showPopup('infoPopup');
     } catch (error) {
-        console.error('Error al cargar la información:', error);
         alert('No se pudo cargar la información del destino');
     }
 }
 function togglePDF() {
     const pdfViewer = document.getElementById('pdfViewer');
+    
+    if (!pdfViewer.src || pdfViewer.src === window.location.href) {
+        alert("No hay un PDF disponible para mostrar.");
+        return;
+    }
+
     pdfViewer.style.display = pdfViewer.style.display === 'none' ? 'block' : 'none';
 }
+
 // Agregar esta función al inicio del archivo admin.js
 // Modificar la generación de cards en loadDestinos
 async function loadDestinos() {
