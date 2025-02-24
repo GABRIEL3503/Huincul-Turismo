@@ -243,7 +243,7 @@ app.put('/api/destinos/:id', requireAuth, upload.fields([
     const { titulo, fecha, frase_corta, estadia, transporte, alojamiento, regimen_comidas } = req.body;
 
     // Obtener información actual del destino
-    db.get('SELECT imagen_url, pdf_url FROM destinos WHERE id = ?', [id], async (err, destino) => {
+    db.get('SELECT pdf_url FROM destinos WHERE id = ?', [id], async (err, destino) => {
       if (err) {
         return res.status(500).json({ error: 'Error al obtener el destino' });
       }
@@ -252,52 +252,34 @@ app.put('/api/destinos/:id', requireAuth, upload.fields([
         return res.status(404).json({ error: 'Destino no encontrado' });
       }
 
-      let imagen_url = destino.imagen_url;
       let pdf_url = destino.pdf_url;
 
-      // Verificar si hay una nueva imagen y eliminar la anterior si es diferente
-      if (req.files['imagen']) {
-        if (imagen_url) {
-          const oldImagePath = path.join(__dirname, imagen_url);
-          if (fs.existsSync(oldImagePath)) {
-            fs.unlink(oldImagePath, (err) => {
-              if (err) console.error('⚠️ Error al eliminar imagen anterior:', err);
-            });
-          }
-        }
-
-        const newImagePath = req.files['imagen'][0].path;
-        await processImage(newImagePath); // Procesar la nueva imagen
-        imagen_url = '/uploads/images/' + path.basename(newImagePath);
-      }
-
-      // Verificar si hay un nuevo PDF y eliminar el anterior si es diferente
+      // Si se sube un nuevo PDF, eliminar el anterior
       if (req.files['pdf']) {
         if (pdf_url) {
           const oldPdfPath = path.join(__dirname, pdf_url);
           if (fs.existsSync(oldPdfPath)) {
             fs.unlink(oldPdfPath, (err) => {
-              if (err) console.error('⚠️ Error al eliminar PDF anterior:', err);
+              if (err) console.error('⚠️ Error al eliminar el PDF anterior:', err);
+              else console.log('🗑 PDF anterior eliminado:', oldPdfPath);
             });
           }
         }
 
         const newPdfPath = req.files['pdf'][0].path;
-        await compressPDF(newPdfPath); // Comprimir el nuevo PDF
         pdf_url = '/uploads/pdfs/' + path.basename(newPdfPath);
       }
 
       // Actualizar la base de datos con los nuevos valores
       const sql = `
         UPDATE destinos 
-        SET titulo = ?, fecha = ?, imagen_url = ?, pdf_url = ?, 
-            frase_corta = ?, estadia = ?, transporte = ?, 
-            alojamiento = ?, regimen_comidas = ?
+        SET titulo = ?, fecha = ?, pdf_url = ?, frase_corta = ?, 
+            estadia = ?, transporte = ?, alojamiento = ?, regimen_comidas = ?
         WHERE id = ?
       `;
 
       db.run(sql, [
-        titulo, fecha, imagen_url, pdf_url, frase_corta, 
+        titulo, fecha, pdf_url, frase_corta, 
         estadia, transporte, alojamiento, regimen_comidas, id
       ], (err) => {
         if (err) {
@@ -312,11 +294,12 @@ app.put('/api/destinos/:id', requireAuth, upload.fields([
 });
 
 
+
 app.delete('/api/destinos/:id', requireAuth, (req, res) => {
   const { id } = req.params;
 
   // Buscar los archivos asociados antes de eliminar
-  db.get('SELECT imagen_url, pdf_url FROM destinos WHERE id = ?', [id], (err, destino) => {
+  db.get('SELECT pdf_url FROM destinos WHERE id = ?', [id], (err, destino) => {
     if (err) {
       return res.status(500).json({ error: 'Error al consultar la base de datos' });
     }
@@ -325,21 +308,14 @@ app.delete('/api/destinos/:id', requireAuth, (req, res) => {
       return res.status(404).json({ error: 'Destino no encontrado' });
     }
 
-    // Obtener rutas absolutas de los archivos a eliminar
-    const imagePath = destino.imagen_url ? path.join(__dirname, destino.imagen_url) : null;
+    // Obtener ruta absoluta del PDF
     const pdfPath = destino.pdf_url ? path.join(__dirname, destino.pdf_url) : null;
-
-    // Eliminar la imagen si existe
-    if (imagePath && fs.existsSync(imagePath)) {
-      fs.unlink(imagePath, (err) => {
-        if (err) console.error('⚠️ Error al eliminar imagen:', err);
-      });
-    }
 
     // Eliminar el PDF si existe
     if (pdfPath && fs.existsSync(pdfPath)) {
       fs.unlink(pdfPath, (err) => {
-        if (err) console.error('⚠️ Error al eliminar PDF:', err);
+        if (err) console.error('⚠️ Error al eliminar el PDF:', err);
+        else console.log('🗑 PDF eliminado:', pdfPath);
       });
     }
 
@@ -348,7 +324,7 @@ app.delete('/api/destinos/:id', requireAuth, (req, res) => {
       if (err) {
         return res.status(500).json({ error: 'Error al eliminar el destino de la base de datos' });
       }
-      res.json({ success: true, message: 'Destino eliminado correctamente junto con sus archivos' });
+      res.json({ success: true, message: 'Destino eliminado correctamente junto con su PDF' });
     });
   });
 });
