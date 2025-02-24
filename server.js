@@ -71,76 +71,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 50 * 1024 * 1024 }, // Máximo 5MB
+  limits: { fileSize: 50 * 1024 * 1024 }, // Aumentamos el límite a 50MB
   fileFilter: (req, file, cb) => {
-    if (file.fieldname === 'pdf' && file.mimetype !== 'application/pdf') {
-      return cb(new Error('Solo se permiten archivos PDF'));
-    }
-    if (file.fieldname === 'imagen' && !file.mimetype.startsWith('image/')) {
-      return cb(new Error('Solo se permiten imágenes'));
+    if (file.mimetype !== 'application/pdf' && !file.mimetype.startsWith('image/')) {
+      return cb(new Error('Solo se permiten archivos PDF e imágenes'));
     }
     cb(null, true);
   }
 });
 
-const fileFilter = (req, file, cb) => {
-  if (file.fieldname === 'pdf') {
-    if (file.mimetype !== 'application/pdf') {
-      cb(new Error('Solo se permiten archivos PDF'), false);
-      return;
-    }
-    if (parseInt(req.headers['content-length']) > 5 * 1024 * 1024) {
-      cb(new Error('El PDF no debe superar los 5MB'), false);
-      return;
-    }
-  } else if (file.fieldname === 'imagen') {
-    if (!file.mimetype.startsWith('image/')) {
-      cb(new Error('Solo se permiten imágenes'), false);
-      return;
-    }
-    if (parseInt(req.headers['content-length']) > 2 * 1024 * 1024) {
-      cb(new Error('La imagen no debe superar los 2MB'), false);
-      return;
-    }
-  }
-  cb(null, true);
-};
 
-
-// Función para procesar imagen
-async function processImage(imagePath) {
-  const outputPath = imagePath;
-  await sharp(imagePath)
-    .resize(800, 600, {
-      fit: 'inside',
-      withoutEnlargement: true
-    })
-    .jpeg({ quality: 80 })
-    .toFile(outputPath + '_temp');
-  
-  fs.unlinkSync(imagePath);
-  fs.renameSync(outputPath + '_temp', outputPath);
-}
-
-// Función para comprimir PDF
-async function compressPDF(inputPath) {
-  try {
-    const pdfBytes = await fs.promises.readFile(inputPath);
-    const pdfDoc = await PDFDocument.load(pdfBytes);
-    
-    const compressedBytes = await pdfDoc.save({
-      useObjectStreams: true,
-      updateMetadata: false,
-      compress: true
-    });
-
-    await fs.promises.writeFile(inputPath, compressedBytes);
-    return true;
-  } catch (error) {
-    console.error('Error al comprimir PDF:', error);
-    return false;
-  }
-}
 
 // Middleware de autenticación
 const requireAuth = (req, res, next) => {
