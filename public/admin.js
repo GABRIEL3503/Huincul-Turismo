@@ -56,7 +56,7 @@ const infoPopup = `
             <div id="infoContent"></div>
             <iframe id="pdfViewer" style="width: 100%; height: 500px; display: none;"></iframe>
             <div class="info-buttons">
-                <button onclick="togglePDF()">Ver PDF</button>
+<button id="openPdfBtn" style="display: none;">Ver PDF</button>
                 <button onclick="closePopup('infoPopup')">Cerrar</button>
             </div>
         </div>
@@ -302,33 +302,42 @@ async function showDestinInfo(button) {
             <p class="info-frase">${destino.frase_corta || ''}</p>
         `;
 
-        const pdfViewer = document.getElementById('pdfViewer');
-        const togglePdfButton = document.querySelector('.info-buttons button');
+        const openPdfButton = document.getElementById('openPdfBtn');
 
         if (destino.pdf_url) {
-            pdfViewer.src = destino.pdf_url;  // 🔥 Ahora asignamos la URL correctamente
-            pdfViewer.style.display = 'none';
-            togglePdfButton.style.display = 'block'; // Mostrar botón si hay PDF
+            openPdfButton.style.display = 'block';
+            openPdfButton.onclick = function() {
+                window.open(destino.pdf_url, '_blank');
+            };
+            console.log("✅ PDF disponible en:", destino.pdf_url);
         } else {
-            pdfViewer.style.display = 'none';
-            togglePdfButton.style.display = 'none'; // Ocultar botón si no hay PDF
+            openPdfButton.style.display = 'none';
+            console.warn("⚠️ No hay PDF disponible para este destino.");
         }
 
         showPopup('infoPopup');
     } catch (error) {
-        alert('No se pudo cargar la información del destino');
+        console.error("❌ Error al obtener los datos del destino:", error);
+        alert('No se pudo cargar la información del destino.');
     }
 }
+
+
 function togglePDF() {
     const pdfViewer = document.getElementById('pdfViewer');
-    
+
     if (!pdfViewer.src || pdfViewer.src === window.location.href) {
-        alert("No hay un PDF disponible para mostrar.");
+        alert("⚠️ No hay un PDF disponible para mostrar.");
         return;
     }
 
-    pdfViewer.style.display = pdfViewer.style.display === 'none' ? 'block' : 'none';
+    if (pdfViewer.style.display === 'none' || pdfViewer.style.display === '') {
+        pdfViewer.style.display = 'block';
+    } else {
+        pdfViewer.style.display = 'none';
+    }
 }
+
 
 // Agregar esta función al inicio del archivo admin.js
 // Modificar la generación de cards en loadDestinos
