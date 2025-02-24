@@ -32,7 +32,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 app.use(express.static('public'));
@@ -71,7 +71,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // Máximo 5MB
+  limits: { fileSize: 50 * 1024 * 1024 }, // Máximo 5MB
   fileFilter: (req, file, cb) => {
     if (file.fieldname === 'pdf' && file.mimetype !== 'application/pdf') {
       return cb(new Error('Solo se permiten archivos PDF'));
