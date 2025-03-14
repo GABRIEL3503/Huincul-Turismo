@@ -935,6 +935,7 @@ font-size: 17px;
     cursor: pointer;
   } */
   .formulariocontacto{
+    display: none;
     max-width: 30vw;
   }
 
@@ -1464,6 +1465,7 @@ body.dark-mode #forma-de-pago::before {
 
 /* Estilos para popups */
 .popup {
+  overflow-y: auto;
   display: none;
   position: fixed;
   top: 0;

@@ -350,32 +350,26 @@ async function loadDestinos() {
         containerCard.innerHTML = ''; 
         
         destinos.forEach(destino => {
-            // Formatear la fecha para mostrarla como texto
-            const fecha = new Date(destino.fecha).toLocaleDateString('es-ES', {
+            const fechaFormateada = new Date(destino.fecha).toLocaleDateString('es-ES', {
                 day: 'numeric',
                 month: 'long'
             }).toUpperCase();
-            
+
             const cardHTML = `
-                <div class="card" data-id="${destino.id}" aos="fade-up" aos-duration="1500">
+                <div class="card aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                     <img src="${destino.imagen_url}" alt="${destino.titulo}">
-                    <div class="admin-control">
-                        <button onclick="editDestino(this)" class="edit-btn">Editar</button>
-                        <button onclick="deleteDestino(this)" class="delete-btn">Eliminar</button>
-                    </div>
-                    <div class="card-content">
-                        <h3>${destino.titulo}</h3>
-                        <p>${fecha}</p>
-                        <button class="boton-card btn-get-started scrollto butcard" onclick="showDestinInfo(this)">MAS INFO</button>
-                    </div>
+                    <p>${destino.titulo}</p>
+                    <p style="font-size: 15px;">
+                        <box-icon name="calendar-event" color="#606060"></box-icon> ${fechaFormateada} 
+                        <a onclick="showDestinInfo(this)" class="boton-card btn-get-started scrollto butcard">MÁS INFO</a>
+                    </p>
                 </div>
             `;
-            
+
             containerCard.insertAdjacentHTML('beforeend', cardHTML);
         });
 
         showAdminControls();
-
     } catch (error) {
         console.error('Error al cargar destinos:', error);
     }
