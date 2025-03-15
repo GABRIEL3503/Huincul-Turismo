@@ -834,9 +834,22 @@ z-index: 22;
   margin-top: 22px;
 }
 
+#texo p{
+  margin-left: 18px;
+  display: flex
+;
+  justify-content: center;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: stretch;
+}
 
-
-
+.box-info{
+  display: flex
+  ;
+      justify-content: space-evenly;
+  
+}
 
 @media only screen and (max-width: 1024px) {
 
