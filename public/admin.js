@@ -298,7 +298,7 @@ async function showDestinInfo(button) {
 
         document.getElementById('infoTitle').innerHTML = `
             <button class="close-popup" onclick="closePopup('infoPopup')">
-                <box-icon name="x" color="#ff4d4d" size="lg"></box-icon>
+                <box-icon name="x" color="gray" size="lg"></box-icon>
             </button>
             ${destino.titulo}
         `;
