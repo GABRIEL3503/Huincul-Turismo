@@ -301,7 +301,7 @@ async function showDestinInfo(button) {
         document.getElementById('infoContent').innerHTML = `
             <div class="flip-card-back">
                 <span id="texto" class="texto">
-                    <h4>${destino.titulo}: ¡Relajación y bienestar garantizados!</h4>
+                    <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
                     
                     <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
                     <br> <strong>Fecha:</strong> ${destino.fecha}</p>
@@ -315,7 +315,7 @@ async function showDestinInfo(button) {
                     <p><box-icon class="icon-tarj" name="restaurant" color="#4EB3D3"></box-icon>
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
-                    <p> <strong>Descripción:</strong> ${destino.frase_corta || 'No disponible'}</p>
+                    <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
 
                     <div class="contenedor-social-links">
                         <div>
@@ -351,6 +351,7 @@ async function showDestinInfo(button) {
         alert('No se pudo cargar la información del destino.');
     }
 }
+
 
 
 
