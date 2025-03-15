@@ -1527,6 +1527,15 @@ body.dark-mode #forma-de-pago::before {
   min-height: 18px;
   resize: vertical;
 }
+#openPdfBtn{
+  width: 80%;
+  color: #ffffff;
+  display: flex
+;
+  /* display: block; */
+  justify-content: center;
+  background-color: lightskyblue;
+}
 
 .popup button {
   padding: 10px 20px;
