@@ -638,8 +638,10 @@ h3 {
   color: rgb(255, 255, 255);
 }
 .cont{
-  width: 80%;
-}
+  display: flex
+  ;
+      width: 100%;
+      justify-content: center;}
 .social-links {
   margin-bottom: 13px;
   max-width: 320px;
@@ -879,8 +881,8 @@ z-index: 22;
 
 .flip-card-back .social-links {
   margin-bottom: -3px;
-  max-width: 320px;
-  padding: 11px 59px;
+  /* max-width: 420px; */
+  padding: 11px 101px;
   font-size: 12px;
   line-height: 1.25rem;
   font-weight: 400;
