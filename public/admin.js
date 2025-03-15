@@ -297,22 +297,52 @@ async function showDestinInfo(button) {
         const destino = await response.json();
 
         document.getElementById('infoTitle').textContent = destino.titulo;
+
         document.getElementById('infoContent').innerHTML = `
-            <p class="info-fecha">${destino.fecha}</p>
-            <p class="info-frase">${destino.frase_corta || ''}</p>
+            <div class="flip-card-back">
+                <span id="texto" class="texto">
+                    <h4>${destino.titulo}: ¡Relajación y bienestar garantizados!</h4>
+                    
+                    <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
+                    <br> <strong>Fecha:</strong> ${destino.fecha}</p>
+
+                    <p><box-icon class="icon-tarj" name="hotel" type="solid" color="#4EB3D3"></box-icon> 
+                    <br><strong>Estadía:</strong> ${destino.estadia || 'No especificado'}</p>
+
+                    <p><box-icon class="icon-tarj" name="bus" color="#4EB3D3"></box-icon> 
+                    <br> <strong>Transporte:</strong> ${destino.transporte || 'No especificado'}</p>
+
+                    <p><box-icon class="icon-tarj" name="restaurant" color="#4EB3D3"></box-icon>
+                    <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
+
+                    <p> <strong>Descripción:</strong> ${destino.frase_corta || 'No disponible'}</p>
+
+                    <div class="contenedor-social-links">
+                        <div>
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20paquete%20de%20${encodeURIComponent(destino.titulo)}" 
+                               target="_blank" style="font-size: 18px;">
+                                <button class="social-links">
+                                    Solicitar más Info
+                                    <span>
+                                        <img src="img/whatsapp.png" alt="">
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
         `;
 
+        // Manejo del PDF
         const openPdfButton = document.getElementById('openPdfBtn');
-
         if (destino.pdf_url) {
             openPdfButton.style.display = 'block';
             openPdfButton.onclick = function() {
                 window.open(destino.pdf_url, '_blank');
             };
-            console.log("✅ PDF disponible en:", destino.pdf_url);
         } else {
             openPdfButton.style.display = 'none';
-            console.warn("⚠️ No hay PDF disponible para este destino.");
         }
 
         showPopup('infoPopup');
@@ -321,6 +351,7 @@ async function showDestinInfo(button) {
         alert('No se pudo cargar la información del destino.');
     }
 }
+
 
 
 function togglePDF() {
