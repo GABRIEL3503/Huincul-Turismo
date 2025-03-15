@@ -343,22 +343,15 @@ async function showDestinInfo(button) {
             </div>
         `;
 
-        // Mostrar botón "Ver PDF" si hay un PDF disponible
+        // Mostrar botón "Ver PDF" si hay un PDF disponible (MISMA LÓGICA ORIGINAL)
         const openPdfButton = document.getElementById('openPdfBtn');
-        let pdfUrl = destino.pdf_url;
 
-        if (pdfUrl) {
-            // Asegurar que la URL del PDF es correcta
-            if (!pdfUrl.startsWith('http') && !pdfUrl.startsWith('/')) {
-                pdfUrl = '/' + pdfUrl;  // Agregar `/` si es necesario
-            }
-
+        if (destino.pdf_url) {
             openPdfButton.style.display = 'block';
             openPdfButton.onclick = function () {
-                window.open(pdfUrl, '_blank');
+                window.open(destino.pdf_url, '_blank');
             };
-
-            console.log("✅ PDF disponible en:", pdfUrl);
+            console.log("✅ PDF disponible en:", destino.pdf_url);
         } else {
             openPdfButton.style.display = 'none';
             console.warn("⚠️ No hay PDF disponible para este destino.");
