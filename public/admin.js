@@ -296,17 +296,54 @@ async function showDestinInfo(button) {
         const response = await fetch(`/api/destinos/${id}`);
         const destino = await response.json();
 
-        document.getElementById('infoTitle').textContent = destino.titulo;
-        document.getElementById('infoContent').innerHTML = `
-            <p class="info-fecha">${destino.fecha}</p>
-            <p class="info-frase">${destino.frase_corta || ''}</p>
-            <p><strong>Estadía:</strong> ${destino.estadia || 'No especificado'}</p>
-            <p><strong>Transporte:</strong> ${destino.transporte || 'No especificado'}</p>
-            <p><strong>Alojamiento:</strong> ${destino.alojamiento || 'No especificado'}</p>
-            <p><strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
+        document.getElementById('infoTitle').innerHTML = `
+            <button class="close-popup" onclick="closePopup('infoPopup')">
+                <box-icon name="x" color="gray" width="80" height="80"></box-icon>
+            </button>
+            ${destino.titulo}
         `;
 
-        // Mostrar botón "Ver PDF" si hay un PDF disponible (MISMA LÓGICA ORIGINAL)
+        document.getElementById('infoContent').innerHTML = `
+            <div class="flip-card-back">
+                <span id="texto" class="texto">
+                    <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
+                    
+                    <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
+                    <br> <strong>Fecha:</strong> ${destino.fecha}</p>
+
+                    <p><box-icon class="icon-tarj" name="hotel" type="solid" color="#4EB3D3"></box-icon> 
+                    <br><strong>Estadía:</strong> ${destino.estadia || 'No especificado'}</p>
+
+                    <p><box-icon class="icon-tarj" name="bus" color="#4EB3D3"></box-icon> 
+                    <br> <strong>Transporte:</strong> ${destino.transporte || 'No especificado'}</p>
+
+                    <p><box-icon class="icon-tarj" name="restaurant" color="#4EB3D3"></box-icon>
+                    <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
+
+                    <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
+                    
+                    <span class="cont">
+                        <button id="openPdfBtn" class="btn-pdf" style="display: none;">Ver itinerario completo</button>
+                    </span>
+
+                    <div class="contenedor-social-links">
+                        <div>
+                            <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20paquete%20de%20${encodeURIComponent(destino.titulo)}" 
+                               target="_blank" style="font-size: 18px;">
+                                <button class="social-links">
+                                    Solicitar más Info
+                                    <span>
+                                        <img src="img/whatsapp.png" alt="WhatsApp">
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        `;
+
+        // ✅ Manteniendo la lógica original para mostrar el PDF correctamente
         const openPdfButton = document.getElementById('openPdfBtn');
 
         if (destino.pdf_url) {
