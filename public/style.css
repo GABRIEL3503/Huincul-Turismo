@@ -1620,4 +1620,16 @@ body.dark-mode #forma-de-pago::before {
       align-content: center;
       align-items: center;
       justify-content: space-around;
-}   
+}   .close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-popup:hover {
+  transform: scale(1.2);
+}
