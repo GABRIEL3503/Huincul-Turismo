@@ -298,7 +298,7 @@ async function showDestinInfo(button) {
 
         document.getElementById('infoTitle').innerHTML = `
             <button class="close-popup" onclick="closePopup('infoPopup')">
-                <box-icon name="x" color="gray" size="lg"></box-icon>
+                <box-icon name="x" color="#ff4d4d" width="80" height="80"></box-icon>
             </button>
             ${destino.titulo}
         `;
@@ -322,6 +322,10 @@ async function showDestinInfo(button) {
 
                     <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
 
+                    <div id="pdfContainer" style="display: none;">
+                        <button id="openPdfBtn" class="btn-pdf">Ver PDF</button>
+                    </div>
+
                     <div class="contenedor-social-links">
                         <div>
                             <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20paquete%20de%20${encodeURIComponent(destino.titulo)}" 
@@ -339,15 +343,17 @@ async function showDestinInfo(button) {
             </div>
         `;
 
-        // Manejo del PDF
+        // Mostrar botón "Ver PDF" si hay un PDF disponible
+        const pdfContainer = document.getElementById('pdfContainer');
         const openPdfButton = document.getElementById('openPdfBtn');
+
         if (destino.pdf_url) {
-            openPdfButton.style.display = 'block';
+            pdfContainer.style.display = 'block';
             openPdfButton.onclick = function() {
                 window.open(destino.pdf_url, '_blank');
             };
         } else {
-            openPdfButton.style.display = 'none';
+            pdfContainer.style.display = 'none';
         }
 
         showPopup('infoPopup');
