@@ -883,10 +883,10 @@ z-index: 22;
 .flip-card-back .social-links {
   margin-bottom: -3px;
   /* max-width: 420px; */
-  padding: 11px 101px;
-  font-size: 12px;
+  padding: 11px 62px;
+  font-size: 14px;
   line-height: 1.25rem;
-  font-weight: 400;
+  font-weight: 800;
   padding-left: 31px;
 }
 
