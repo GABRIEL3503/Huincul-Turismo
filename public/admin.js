@@ -301,6 +301,7 @@ async function showDestinInfo(button) {
         document.getElementById('infoContent').innerHTML = `
             <div class="flip-card-back">
                 <span id="texto" class="texto">
+                    <span class="close-popup" onclick="closePopup('infoPopup')">&times;</span>
                     <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
                     
                     <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
@@ -315,6 +316,7 @@ async function showDestinInfo(button) {
                     <p><box-icon class="icon-tarj" name="restaurant" color="#4EB3D3"></box-icon>
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
+                    <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
 
                     <div class="contenedor-social-links">
                         <div>
