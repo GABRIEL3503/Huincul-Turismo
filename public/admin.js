@@ -321,9 +321,11 @@ async function showDestinInfo(button) {
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
                     <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
-<span class="cont">
-                    <button id="openPdfBtn" class="btn-pdf" style="display: none;">Ver itinerario completo</button>
-</span>
+                    
+                    <span class="cont">
+                        <button id="openPdfBtn" class="btn-pdf" style="display: none;">Ver itinerario completo</button>
+                    </span>
+
                     <div class="contenedor-social-links">
                         <div>
                             <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20paquete%20de%20${encodeURIComponent(destino.titulo)}" 
@@ -331,7 +333,7 @@ async function showDestinInfo(button) {
                                 <button class="social-links">
                                     Solicitar más Info
                                     <span>
-                                        <img src="img/whatsapp.png" alt="">
+                                        <img src="img/whatsapp.png" alt="WhatsApp">
                                     </span>
                                 </button>
                             </a>
@@ -343,13 +345,20 @@ async function showDestinInfo(button) {
 
         // Mostrar botón "Ver PDF" si hay un PDF disponible
         const openPdfButton = document.getElementById('openPdfBtn');
+        let pdfUrl = destino.pdf_url;
 
-        if (destino.pdf_url) {
+        if (pdfUrl) {
+            // Asegurar que la URL del PDF es correcta
+            if (!pdfUrl.startsWith('http') && !pdfUrl.startsWith('/')) {
+                pdfUrl = '/' + pdfUrl;  // Agregar `/` si es necesario
+            }
+
             openPdfButton.style.display = 'block';
-            openPdfButton.onclick = function() {
-                window.open(destino.pdf_url, '_blank');
+            openPdfButton.onclick = function () {
+                window.open(pdfUrl, '_blank');
             };
-            console.log("✅ PDF disponible en:", destino.pdf_url);
+
+            console.log("✅ PDF disponible en:", pdfUrl);
         } else {
             openPdfButton.style.display = 'none';
             console.warn("⚠️ No hay PDF disponible para este destino.");
