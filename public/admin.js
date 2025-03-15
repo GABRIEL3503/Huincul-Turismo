@@ -321,7 +321,7 @@ async function showDestinInfo(button) {
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
                     <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
-<span class="cont"
+<span class="cont">
                     <button id="openPdfBtn" class="btn-pdf" style="display: none;"> Ver PDF 📄</button>
 </span>
                     <div class="contenedor-social-links">
