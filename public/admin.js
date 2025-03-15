@@ -343,15 +343,24 @@ async function showDestinInfo(button) {
             </div>
         `;
 
-        // ✅ Manteniendo la lógica original para mostrar el PDF correctamente
+        // ✅ Corregimos el manejo del PDF
         const openPdfButton = document.getElementById('openPdfBtn');
+        let pdfUrl = destino.pdf_url;
 
-        if (destino.pdf_url) {
+        if (pdfUrl) {
+            // Asegurar que la URL del PDF está bien formada
+            if (!pdfUrl.startsWith('http')) {
+                pdfUrl = `${window.location.origin}/${pdfUrl.replace(/^\/+/, '')}`;
+            }
+
             openPdfButton.style.display = 'block';
             openPdfButton.onclick = function () {
-                window.open(destino.pdf_url, '_blank');
+                const newTab = window.open(pdfUrl, '_blank');
+                if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+                    alert("⚠️ Tu navegador bloqueó la apertura del PDF. Permite las ventanas emergentes.");
+                }
             };
-            console.log("✅ PDF disponible en:", destino.pdf_url);
+            console.log("✅ PDF disponible en:", pdfUrl);
         } else {
             openPdfButton.style.display = 'none';
             console.warn("⚠️ No hay PDF disponible para este destino.");
@@ -363,6 +372,7 @@ async function showDestinInfo(button) {
         alert('No se pudo cargar la información del destino.');
     }
 }
+
 
 
 
