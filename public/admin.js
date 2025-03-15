@@ -296,12 +296,16 @@ async function showDestinInfo(button) {
         const response = await fetch(`/api/destinos/${id}`);
         const destino = await response.json();
 
-        document.getElementById('infoTitle').textContent = destino.titulo;
+        document.getElementById('infoTitle').innerHTML = `
+            <button class="close-popup" onclick="closePopup('infoPopup')">
+                <box-icon name="x-circle" color="#ff4d4d" size="lg"></box-icon>
+            </button>
+            ${destino.titulo}
+        `;
 
         document.getElementById('infoContent').innerHTML = `
             <div class="flip-card-back">
                 <span id="texto" class="texto">
-                    <span class="close-popup" onclick="closePopup('infoPopup')">&times;</span>
                     <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
                     
                     <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
@@ -352,6 +356,7 @@ async function showDestinInfo(button) {
         alert('No se pudo cargar la información del destino.');
     }
 }
+
 
 
 
