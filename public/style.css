@@ -1537,7 +1537,7 @@ body.dark-mode #forma-de-pago::before {
 ;
   /* display: block; */
   justify-content: center;
-  background-color: lightskyblue;
+  background-color: #4eb3d3;
 }
 
 .popup button {
