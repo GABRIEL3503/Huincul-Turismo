@@ -322,9 +322,7 @@ async function showDestinInfo(button) {
 
                     <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
 
-                    <div id="pdfContainer" class="pdf-container" style="display: none;">
-                        <button id="openPdfBtn" class="btn-pdf">📄 Ver PDF</button>
-                    </div>
+                    <button id="openPdfBtn" class="btn-pdf" style="display: none;">📄 Ver PDF</button>
 
                     <div class="contenedor-social-links">
                         <div>
@@ -344,16 +342,17 @@ async function showDestinInfo(button) {
         `;
 
         // Mostrar botón "Ver PDF" si hay un PDF disponible
-        const pdfContainer = document.getElementById('pdfContainer');
         const openPdfButton = document.getElementById('openPdfBtn');
 
         if (destino.pdf_url) {
-            pdfContainer.style.display = 'block';
+            openPdfButton.style.display = 'block';
             openPdfButton.onclick = function() {
                 window.open(destino.pdf_url, '_blank');
             };
+            console.log("✅ PDF disponible en:", destino.pdf_url);
         } else {
-            pdfContainer.style.display = 'none';
+            openPdfButton.style.display = 'none';
+            console.warn("⚠️ No hay PDF disponible para este destino.");
         }
 
         showPopup('infoPopup');
@@ -362,8 +361,6 @@ async function showDestinInfo(button) {
         alert('No se pudo cargar la información del destino.');
     }
 }
-
-
 
 
 
