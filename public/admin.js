@@ -321,9 +321,9 @@ async function showDestinInfo(button) {
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
                     <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
-
+<span class="cont"
                     <button id="openPdfBtn" class="btn-pdf" style="display: none;"> Ver PDF 📄</button>
-
+</span>
                     <div class="contenedor-social-links">
                         <div>
                             <a href="https://api.whatsapp.com/send?phone=5492995657308&text=Hola!%20Estoy%20interesado%20en%20el%20paquete%20de%20${encodeURIComponent(destino.titulo)}" 
