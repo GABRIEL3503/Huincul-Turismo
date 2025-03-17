@@ -320,7 +320,6 @@ async function showDestinInfo(button) {
                     <p><box-icon class="icon-tarj" name="restaurant" color="#4EB3D3"></box-icon>
                     <br> <strong>Régimen de comidas:</strong> ${destino.regimen_comidas || 'No especificado'}</p>
 
-                    <p><strong>Descripción:</strong> ${destino.descripcion || 'No disponible'}</p>
                     
                     <span class="cont">
                         <button id="openPdfBtn" class="btn-pdf" style="display: none;">Ver itinerario completo</button>
