@@ -41,7 +41,7 @@ const destinoForm = `
                 <textarea name="alojamiento" placeholder="Alojamiento"></textarea>
                 <textarea name="regimen_comidas" placeholder="Régimen de comidas"></textarea>
                 <div class="form-buttons">
-                    <button type="submit">Guardar</button>
+                    <button class="btn-ok" type="submit">Guardar</button>
                     <button type="button" onclick="closePopup('destinoFormPopup')">Cancelar</button>
                 </div>
             </form>

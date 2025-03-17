@@ -737,7 +737,15 @@ html {
 .contacto {
   margin-bottom: 80px;
 }
-
+.form-buttons{
+  display: flex
+  ;
+      align-items: center;
+      justify-content: space-around;
+}
+.btn-ok{
+  background-color: #299c29;
+}
 h2 {
   position: relative;
 }
