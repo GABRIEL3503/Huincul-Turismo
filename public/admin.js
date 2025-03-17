@@ -17,7 +17,7 @@ const loginPopup = `
             <h2>Iniciar Sesión</h2>
             <form id="adminLoginForm">
                 <input type="password" id="adminPassword" placeholder="Contraseña" required>
-                <button type="submit">Ingresar</button>
+                <button class="btn-ing" type="submit">Ingresar</button>
                 <button type="button" onclick="closePopup('adminLoginPopup')">Cancelar</button>
             </form>
         </div>
