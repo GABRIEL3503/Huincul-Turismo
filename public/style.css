@@ -704,7 +704,9 @@ font-size: 17px;
 ;
   justify-content: center;
 }
-
+.btn-ing{
+  background-color: #299c29;
+}
 footer {
   height: 30vh;
 }
