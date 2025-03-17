@@ -98,7 +98,7 @@ const requireAuth = (req, res, next) => {
 // Login
 app.post('/login', (req, res) => {
   const { password } = req.body;
-  if (password === 'tu_contraseña') { // Cambiar por tu contraseña deseada
+  if (password === 'huincul_app') { // Cambiar por tu contraseña deseada
     req.session.isAuthenticated = true;
     res.json({ success: true });
   } else {
