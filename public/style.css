@@ -702,7 +702,7 @@ font-size: 17px;
   align-items: baseline;
   display: flex
 ;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 footer {
