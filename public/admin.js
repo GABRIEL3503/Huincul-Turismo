@@ -410,17 +410,13 @@ async function loadDestinos() {
         
         destinos.forEach(destino => {
             // Formatear la fecha para mostrarla como texto
-            function parseFechaCorrectamente(fechaStr) {
-                // Asume formato dd-mm-yy o dd-mm-yyyy
-                const [d, m, a] = fechaStr.split("-");
-                const anio = a.length === 2 ? `20${a}` : a;
-                return new Date(`${anio}-${m}-${d}`);
+            function formatearFechaTexto(iso) {
+                const [anio, mes, dia] = iso.split("-");
+                const meses = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+                return `${parseInt(dia)} DE ${meses[parseInt(mes) - 1]}`;
             }
             
-            const fecha = parseFechaCorrectamente(destino.fecha).toLocaleDateString('es-ES', {
-                day: 'numeric',
-                month: 'long'
-            }).toUpperCase();
+            const fecha = formatearFechaTexto(destino.fecha);
             
             
             const cardHTML = `
