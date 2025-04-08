@@ -2,6 +2,10 @@
 const isAuthenticated = () => {
     return localStorage.getItem('isAuthenticated') === 'true';
 };
+function formatearFechaDdMmAa(fecha) {
+    const [a, m, d] = fecha.split('-');
+    return `${d}-${m}-${a.slice(2)}`;
+}
 
 const showAdminControls = () => {
     const adminControls = document.querySelectorAll('.admin-control');
@@ -308,8 +312,9 @@ async function showDestinInfo(button) {
                 <span id="texto" class="texto">
                     <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
                     
-                    <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
-                    <br> <strong>Fecha:</strong> ${destino.fecha}</p>
+                <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
+<br> <strong>Fecha:</strong> ${destino.fecha}</p>
+
 
                     <p><box-icon class="icon-tarj" name="hotel" type="solid" color="#4EB3D3"></box-icon> 
                     <br><strong>Estadía:</strong> ${destino.estadia || 'No especificado'}</p>
