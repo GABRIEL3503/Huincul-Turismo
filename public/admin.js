@@ -312,8 +312,9 @@ async function showDestinInfo(button) {
                 <span id="texto" class="texto">
                     <h4>${destino.frase_corta || '¡Experiencia inolvidable asegurada!'}</h4>
                     
-                <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
-<br> <strong>Fecha:</strong> ${destino.fecha}</p>
+              <p><box-icon class="icon-tarj" type="solid" name="calendar" color="#4EB3D3"></box-icon> 
+<br> <strong>Fecha:</strong> ${formatearFechaDdMmAa(destino.fecha)}</p>
+
 
 
                     <p><box-icon class="icon-tarj" name="hotel" type="solid" color="#4EB3D3"></box-icon> 
