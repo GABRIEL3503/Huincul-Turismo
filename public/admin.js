@@ -410,10 +410,18 @@ async function loadDestinos() {
         
         destinos.forEach(destino => {
             // Formatear la fecha para mostrarla como texto
-            const fecha = new Date(destino.fecha).toLocaleDateString('es-ES', {
+            function parseFechaCorrectamente(fechaStr) {
+                // Asume formato dd-mm-yy o dd-mm-yyyy
+                const [d, m, a] = fechaStr.split("-");
+                const anio = a.length === 2 ? `20${a}` : a;
+                return new Date(`${anio}-${m}-${d}`);
+            }
+            
+            const fecha = parseFechaCorrectamente(destino.fecha).toLocaleDateString('es-ES', {
                 day: 'numeric',
                 month: 'long'
             }).toUpperCase();
+            
             
             const cardHTML = `
                 <div class="card" data-id="${destino.id}" aos="fade-up" aos-duration="1500">
